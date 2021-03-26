@@ -24,7 +24,7 @@ class Communication:
         self.connected = False
         self.SOCKET = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.CHUNK_SIZE = 2048
-        self.usernames = {}
+        self.usernames_rooms = {}
 
 
     def connect(self, USERNAME: str, IP: str, PORT: int):
@@ -39,16 +39,16 @@ class Communication:
         try:
             self.SOCKET.connect(self.SERVER)
             self.SOCKET.send(self.USERNAME.encode())
-            self.usernames = self.SOCKET.recv(self.CHUNK_SIZE).decode()
+            self.usernames_rooms = self.SOCKET.recv(self.CHUNK_SIZE).decode()
             self.connected = True
             print("[CONNECTED] " + str(self.SERVER))
-            print("[USERS] ", self.usernames)
+            print("[USERS/ROOMS] ", self.usernames_rooms)
         except Exception as e:
             self.connected = False
             print("[CONNECTION ERROR] " + str(e))
             return self.connected
 
-        # starting devices
+        # starting devices (start their own threads)
         microphone = Microphone(self, self.CHUNK_SIZE)
         speaker = Speaker(self, self.CHUNK_SIZE)
 
@@ -63,10 +63,8 @@ class Communication:
         try:
             self.SOCKET.send(("DISCONNECT_" + str(self.USERNAME) + "_END").encode())
             self.SOCKET.close()
-            self.connected = False
         except Exception as e:
             self.SOCKET.close()
-            self.connected = False
             print("[DISCONNECTION ERROR] " + str(e))
 
 
@@ -92,8 +90,8 @@ class Communication:
     def handle_message(self, string_data):
         """ Interprets the messages inside the string_data """
         if "DISCONNECT" in string_data:
-            pass
+            pass    # UPDATE UI!
         if "ROOMSWITCH" in string_data:
-            pass
+            pass    # UPDATE UI!
         if "USERJOIN" in string_data:
-            pass
+            pass    # UPDATE UI!

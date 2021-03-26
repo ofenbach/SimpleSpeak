@@ -39,8 +39,8 @@ class Microphone:
         print("[MICROPHONE] Started sending data ...")
         while self.running:
             try:
-                data = self.recording_stream.read(self.CHUNK_SIZE)      # OPTIONAL: exception_on_overflow=False
                 if not self.muted:
+                    data = self.recording_stream.read(self.CHUNK_SIZE)      # OPTIONAL: exception_on_overflow=False
                     self.COMMUNICATION.send_data(data)
             except Exception as e:
                 print("[MICROPHONE ERROR] " + str(e))
