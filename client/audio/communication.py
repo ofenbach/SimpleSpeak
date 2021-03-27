@@ -49,8 +49,8 @@ class Communication:
             return self.connected
 
         # starting devices (start their own threads)
-        microphone = Microphone(self, self.CHUNK_SIZE)
-        speaker = Speaker(self, self.CHUNK_SIZE)
+        self.microphone = Microphone(self, self.CHUNK_SIZE)
+        self.speaker = Speaker(self, self.CHUNK_SIZE)
 
         while self.connected:
             pass
