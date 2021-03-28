@@ -1,5 +1,6 @@
 from audio.communication import Communication
 from ui.main_page import MainPage
+import webui.webui
 
 
 def main():
@@ -7,8 +8,7 @@ def main():
 
     try:
         """ Start UI """
-        MainPage()
-
+        webui.webui.startUI()
     finally:
         """ Important for cleanup communication before leaving
             Double safety, server should handle disconnects cleanly already """
