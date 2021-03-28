@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5868ad2c-4d13-4f03-89e3-bef92b31c5ea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/webui/webui.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/webui/webui.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,8 +136,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.webui" />
         <item itemvalue="Python.server" />
+        <item itemvalue="Python.webui" />
         <item itemvalue="Python.main_page" />
       </list>
     </recent_temporary>
