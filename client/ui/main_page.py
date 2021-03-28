@@ -1,11 +1,21 @@
 import wx
+import threading
 from wx.svg import SVGimage
+
+from client.audio.communication import Communication
 
 
 class MainPage:
 
     def OnClicked(event):
         print("Settings")
+
+    def OnAddRoomClicked(self, event):
+        self.communication.send_message("ROOMSWITCH_" + str(self.communication.USERNAME) +"_room2_END")    # TODO: dynamic room
+        self.room_list = list(self.communication.usernames_rooms.values())
+        self.rooms = wx.ListBox(self.left_panel, size=(190, 360), choices=self.room_list, style=wx.LB_SINGLE)
+        self.rooms.SetBackgroundColour("#251C3B")
+
 
     # room switch event
     def OnRooms(self, event):
@@ -41,11 +51,15 @@ class MainPage:
 
     def __init__(self):
 
+        # start communication with server
+        self.communication = Communication()
+        threading.Thread(target=self.communication.connect, args=("ATOM", "127.0.0.1", 4848)).start()
+
         # window stuff
         resolution = (1080, 720)
         icon_size = (16, 16)
         bsize = (32, 32)
-        app = wx.App()
+        self.app = wx.App()
 
         # sets the default window size
         window = wx.Frame(None, size=resolution)
@@ -58,9 +72,9 @@ class MainPage:
 
         # make panels left, middle and right and set attributes
         panel = wx.Panel(window)
-        left_panel = wx.Panel(panel, size=(200, wx.EXPAND))
-        left_panel.SetBackgroundColour("#251C3B")
-        left_panel.SetForegroundColour("white")
+        self.left_panel = wx.Panel(panel, size=(200, wx.EXPAND))
+        self.left_panel.SetBackgroundColour("#251C3B")
+        self.left_panel.SetForegroundColour("white")
 
         #         # for future expansion
         #         mid_panel = wx.Panel(panel)
@@ -75,6 +89,7 @@ class MainPage:
         img_rnnoise = SVGimage.CreateFromFile("ui/graphics/sound_waves.svg")
         img_rnnoised = SVGimage.CreateFromFile("ui/graphics/sound_waves.svg")
         img_room = SVGimage.CreateFromFile("ui/graphics/room.svg")
+        img_add_room = SVGimage.CreateFromFile("ui/graphics/add.svg")
         img_settings = SVGimage.CreateFromFile("ui/graphics/settings.svg")
 
         # convert images to a usable format
@@ -86,6 +101,7 @@ class MainPage:
         bmp_rnnoise = img_rnnoise.ConvertToScaledBitmap(icon_size)
         bmp_rnnoised = img_rnnoised.ConvertToScaledBitmap(icon_size)
         bmp_room = img_room.ConvertToScaledBitmap(icon_size)
+        bmp_add_room = img_add_room.ConvertToScaledBitmap(icon_size)
         bmp_settings = img_settings.ConvertToScaledBitmap(icon_size)
 
         # rooms header
@@ -93,32 +109,38 @@ class MainPage:
         rooms_text.SetForegroundColour("white")
 
         # replaced with listbox!
-        room_list = ["Connect", "Room 1", "Room 2", "Room 3"]   # @l33tlinux TODO: REPLACE WITH DYNAMIC ROOMS (COMMUNICATION.PY USERNAMES_ROOMS DICT)
-        self.rooms = wx.ListBox(left_panel, size=(190, 360), choices=room_list, style=wx.LB_SINGLE)
+        self.room_list = ["Connect", "Room 1", "Room 2", "Room 3"]   # @l33tlinux TODO: REPLACE WITH DYNAMIC ROOMS (COMMUNICATION.PY USERNAMES_ROOMS DICT)
+        #self.room_list = list(self.communication.usernames_rooms.values())
+        self.rooms = wx.ListBox(self.left_panel, size=(190, 360), choices=self.room_list, style=wx.LB_SINGLE)
         self.rooms.SetBackgroundColour("#251C3B")
-        app.Bind(wx.EVT_LISTBOX, self.OnRooms, self.rooms)
+        self.app.Bind(wx.EVT_LISTBOX, self.OnRooms, self.rooms)
+
+        # create new room!
+        create_room_b = wx.Button(self.left_panel, size=bsize)
+        create_room_b.SetBitmap(bmp_add_room)
+        create_room_b.Bind(wx.EVT_BUTTON, self.OnAddRoomClicked)
 
         # add actions bar
-        settings_b = wx.Button(left_panel, size=bsize)
+        settings_b = wx.Button(self.left_panel, size=bsize)
         settings_b.SetBitmap(bmp_settings)
         settings_b.Bind(wx.EVT_BUTTON, self.OnClicked)
 
-        mute_b = wx.ToggleButton(left_panel, size=bsize)
+        mute_b = wx.ToggleButton(self.left_panel, size=bsize)
         mute_b.SetBitmap(bmp_mic)
         mute_b.SetBitmapPressed(bmp_muted)
         mute_b.Bind(wx.EVT_TOGGLEBUTTON, self.OnMute)
 
-        deaf_b = wx.ToggleButton(left_panel, size=bsize)
+        deaf_b = wx.ToggleButton(self.left_panel, size=bsize)
         deaf_b.SetBitmap(bmp_deaf)
         deaf_b.SetBitmapPressed(bmp_undeaf)
         deaf_b.Bind(wx.EVT_TOGGLEBUTTON, self.OnDeaf)
 
-        rnnoise_b = wx.ToggleButton(left_panel, size=bsize)
+        rnnoise_b = wx.ToggleButton(self.left_panel, size=bsize)
         rnnoise_b.SetBitmap(bmp_rnnoise)
         rnnoise_b.SetBitmapPressed(bmp_rnnoised)
         rnnoise_b.Bind(wx.EVT_TOGGLEBUTTON, self.OnClicked)
 
-        leave_b = wx.Button(left_panel, size=bsize)
+        leave_b = wx.Button(self.left_panel, size=bsize)
         leave_b.SetBitmap(bmp_leave)
         leave_b.Bind(wx.EVT_BUTTON, self.OnLeave)
 
@@ -136,7 +158,7 @@ class MainPage:
         l_sizer.AddSpacer(10)
         l_sizer.Add(rooms_text)
         l_sizer.AddSpacer(10)
-        l_sizer.Add(rooms, flag=wx.EXPAND | wx.LEFT | wx.RIGHT, border=5)
+        l_sizer.Add(self.rooms, flag=wx.EXPAND | wx.LEFT | wx.RIGHT, border=5)
 
         # sizer for action buttons
         action_sizer = wx.BoxSizer(wx.HORIZONTAL)
@@ -162,4 +184,4 @@ class MainPage:
 
         # show everything :P
         window.Show()
-        app.MainLoop()
+        self.app.MainLoop()

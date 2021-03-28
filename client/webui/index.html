@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- HTML Info -->
+    <title>SimpleSpeak</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- EEL Scripts -->
+    <script src="/eel.js"></script>
+    <script src="/scripts.js"></script>
+
+</head>
+
+<body>
+
+<div class="grid-container">
+
+    <!-- Left Sidebar with rooms -->
+    <div class="sidenav">
+
+        <div type="button" onclick="connect_button_pressed()" class="serverbutton">
+            <img class="servericon" src="graphics/wireless.svg"/>
+            <h class="servertext">54.37.205.19</h>
+        </div>
+        <div id="room1_button" type="button" onclick="enter_room('room1')" class="roombutton">
+            <img class="roomicon" src="graphics/voiceroomicon.svg"/>
+            <h class="roomtext">Room1</h>
+        </div>
+        <p id="room1_users" class="online_users_text"></p>
+        <div id="room2_button" type="button" onclick="enter_room('room2')" class="roombutton">
+            <img class="roomicon" src="graphics/voiceroomicon.svg"/>
+            <h class="roomtext">Room2</h>
+        </div>
+        <p id="room2_users" class="online_users_text"></p>
+        <div id="room3_button" type="button" onclick="enter_room('room3')" class="roombutton">
+            <img class="roomicon" src="graphics/voiceroomicon.svg"/>
+            <h class="roomtext">Room3</h>
+        </div>
+        <p id="room3_users" class="online_users_text"></p>
+        <div id="room4_button" type="button" class="roombutton">
+            <img class="roomicon" src="graphics/chat.svg"/>
+            <h class="roomtext">Text Chat</h>
+        </div>
+
+
+        <p id="users_online_text" class="online_users_overview">Not connected</p>
+
+    </div>
+
+    <!-- User overview in the center -->
+    <div class="roomnav">
+        <button type="button" onclick="" class="userbutton">User 1</button>
+        <button type="button" class="userbutton">User 2</button>
+    </div>
+
+    <!-- Options buttons bottom -->
+    <div class="buttonnav">
+        <button type="button" onclick="mute_button_pressed()" class="functionbuttons">
+            <img class="functionsicon" src="graphics/mic.svg"/>
+        </button>
+        <button type="button" onclick="deaf_button_pressed()" class="functionbuttons">
+            <img class="functionsicon" src="graphics/ear_deaf.svg"/>
+        </button>
+        <button type="button" class="functionbuttons">
+            <img class="functionsicon" src="graphics/noise_suppression.svg"/>
+        </button>
+        <button type="button" onclick="close_program()" class="functionbuttons">
+            <img class="functionsicon" src="graphics/leave_room.svg"/>
+        </button>
+    </div>
+
+</div>
+
+</body>
+
+</html>

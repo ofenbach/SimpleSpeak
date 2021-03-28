@@ -1,5 +1,5 @@
 import socket
-import threading
+import ast
 
 from audio.microphone import Microphone
 from audio.speaker import Speaker
@@ -40,6 +40,8 @@ class Communication:
             self.SOCKET.connect(self.SERVER)
             self.SOCKET.send(self.USERNAME.encode())
             self.usernames_rooms = self.SOCKET.recv(self.CHUNK_SIZE).decode()
+            print(self.usernames_rooms)
+            self.usernames_rooms = ast.literal_eval(self.usernames_rooms)       # convert string representation of dict to dict
             self.connected = True
             print("[CONNECTED] " + str(self.SERVER))
             print("[USERS/ROOMS] ", self.usernames_rooms)
@@ -85,6 +87,18 @@ class Communication:
         except Exception as e:
             print("[DATARECV ERROR] " + str(e))
             self.disconnect()
+
+
+    def send_message(self, string_data):
+        """ Probably gets called by UI """
+        if "ROOMSWITCH" in string_data:
+            print("[MESSAGE] ROOMSWITCH")
+            message_end = string_data.find("_END")
+            message_content = string_data[len("ROOMSWITCH_"):message_end]
+            username = message_content.split("_")[0]
+            room = message_content.split("_")[1]
+            self.usernames_rooms[username] = room
+            self.SOCKET.send(string_data.encode())
 
 
     def handle_message(self, string_data):

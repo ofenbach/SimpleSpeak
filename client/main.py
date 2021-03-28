@@ -3,19 +3,17 @@ from ui.main_page import MainPage
 
 
 def main():
-    """ Starts communication with server
-        Start UI    """
-    communication = Communication()
+    """ Start UI """
 
     try:
-        """ Connect and do its thing """
+        """ Start UI """
         MainPage()
-        #communication.connect("Atom", "127.0.0.1", 4848)
 
     finally:
         """ Important for cleanup communication before leaving
             Double safety, server should handle disconnects cleanly already """
-        communication.disconnect()
+        pass
+
 
 if __name__ == "__main__":
     main()

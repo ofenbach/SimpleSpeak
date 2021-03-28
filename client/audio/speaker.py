@@ -1,6 +1,6 @@
-
 import threading
 import pyaudio
+
 
 class Speaker:
     """ Handles received data, which can be audio or messages """
@@ -17,14 +17,14 @@ class Speaker:
 
         # starting speaker and speaker list
         self.pyaudio = pyaudio.PyAudio()
-        print("[AVAILABLE SPEAKERS]")   # TODO
+        print("[AVAILABLE SPEAKERS]")  # TODO
         print("################")
-        self.playing_stream = self.pyaudio.open(format=self.AUDIO_FORMAT, channels=self.CHANNELS, rate=self.RATE, output=True, frames_per_buffer=self.CHUNK_SIZE)
+        self.playing_stream = self.pyaudio.open(format=self.AUDIO_FORMAT, channels=self.CHANNELS, rate=self.RATE,
+                                                output=True, frames_per_buffer=self.CHUNK_SIZE)
 
         # start playing thread
         self.running = True
         threading.Thread(target=self.start_playing).start()
-
 
     def start_playing(self):
         """ Receives data which can be audio or messages. If its messages, call communication to interpret it
@@ -39,10 +39,11 @@ class Speaker:
                     try:
                         string_data = data.decode()
                     except Exception as e:
-                        print("[STRINGDATA] " + str(e))
+                        pass    # there are some errors here, fix later
 
-                if "DISCONNECT" in string_data or "SWITCHROOM" in string_data or "USERJOIN" in string_data:     # there might be a problem here: if a user sends messages audio may be skipped playing
-                    self.COMMUNICATION.handle_message(string_data)                                              # solution maybe: cut out message out of string_data, encode and play data (instead of else)
+                if "DISCONNECT" in string_data or "SWITCHROOM" in string_data or "USERJOIN" in string_data:  # there might be a problem here: if a user sends messages audio may be skipped playing
+                    self.COMMUNICATION.handle_message(
+                        string_data)  # solution maybe: cut out message out of string_data, encode and play data (instead of else)
                 else:
                     try:
                         self.playing_stream.write(data)
