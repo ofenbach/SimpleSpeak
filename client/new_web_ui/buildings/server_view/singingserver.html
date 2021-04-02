@@ -42,6 +42,7 @@
     <title>Dashboard UI Kit Preview</title>
     <link href="/static/css/lib.css" rel="stylesheet" />
     <link href="/static/css/app.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -121,7 +122,11 @@
                   ><span class="nav-link-text">Buildings</span></a
                 ><a class="nav-link-pill" href="/buildings/posts"
                   ><span class="nav-link-text">Posts</span></a
-                ><a
+                >
+
+
+
+                <a
                   class="nav-link-pill active"
                   href="/buildings/conversations"
                   aria-current="page"
@@ -129,7 +134,9 @@
                   ><span class="nav-link-right-el"
                     ><span class="nav-link-count">2</span></span
                   ></a
-                ><a class="nav-link-pill" href="/buildings/amenities"
+                >
+
+                <a class="nav-link-pill" href="/buildings/amenities"
                   ><span class="nav-link-text">Amenities</span></a
                 ><a class="nav-link-pill" href="/buildings/tenants"
                   ><span class="nav-link-text">Tenants</span></a
@@ -189,6 +196,8 @@
               <div class="top-bar-section">
                 <h2 class="top-bar-title">Conversations</h2>
               </div>
+
+
               <div class="top-bar-section buildings-top-bar-actions">
                 <div class="form-group">
                   <div class="input-group">
@@ -203,6 +212,8 @@
                   </div>
                 </div>
                 <div
+
+
                   class="divider-vertical buildings-top-bar-mobile-hidden divider-margin"
                 ></div>
                 <div
@@ -267,251 +278,30 @@
                 </div>
               </div>
             </section>
-            <div class="container-horizontal buildings-conversations">
-              <div class="container-vertical conversations">
-                <nav class="tabs" style="justify-content:flex-start">
-                  <a class="tab-item active" tabindex="0">All Conversations</a
-                  ><a class="tab-item" tabindex="0">Archived</a>
-                  <a class="tab-item" tabindex="0">Starred</a>
-                </nav>
-                <div class="scroll-area conversation-list">
-                  <span class="content-title conversation-section-title"
-                    >Teams</span
-                  ><a
-                    class="conversation-list-item"
-                    href="/buildings/conversations/1"
-                    ><div class="conversation-list-item-avatars">
-                      <span class="avatar"
-                        ><span class="avatar-image-wrapper"
-                          ><img
-                            alt=""
-                            class="avatar-image"
-                            src="/static/media/a01.5a8ba9f1.jpg"/></span></span
-                      ><span class="avatar"
-                        ><span class="avatar-image-wrapper"
-                          ><img
-                            alt=""
-                            class="avatar-image"
-                            src="/static/media/a06.a3705e71.jpg"/></span
-                      ></span>
-                    </div>
-                    <div class="conversation-list-item-content">
-                      <div class="conversation-list-item-header">
-                        <h3 class="conversation-list-item-title">
-                          <span>Office Managers</span
-                          ><span class="status-dot green"></span>
-                        </h3>
-                        <span class="conversation-list-item-time"
-                          >Today at 9:34 AM</span
-                        >
-                      </div>
-                      <div class="conversation-list-item-body">
-                        <p class="conversation-list-item-message">
-                          We have lake-front vacation rentals. No specific
-                          liability waiver for that, but this is some more text
-                          here.
-                        </p>
-                      </div>
-                    </div></a
-                  ><a
-                    class="conversation-list-item"
-                    href="/buildings/conversations/2"
-                    ><div class="conversation-list-item-avatars">
-                      <span class="avatar"
-                        ><span class="avatar-image-wrapper"
-                          ><img
-                            alt=""
-                            class="avatar-image"
-                            src="/static/media/a04.ab031936.jpg"/></span></span
-                      ><span class="avatar"
-                        ><span class="avatar-image-wrapper"
-                          ><span class="avatar-placeholder bg-yellow"
-                            >JP</span
-                          ></span
-                        ></span
-                      >
-                    </div>
-                    <div class="conversation-list-item-content">
-                      <div class="conversation-list-item-header">
-                        <h3 class="conversation-list-item-title">
-                          <span>Finance Team</span>
-                        </h3>
-                        <span class="conversation-list-item-time"
-                          >Last Wednesday at 10:34 AM</span
-                        >
-                      </div>
-                      <div class="conversation-list-item-body">
-                        <p class="conversation-list-item-message">
-                          Hi guys, can you help me on this one? I do really need
-                          help. I’m really exhausted today and I would
-                          appreciate your touch.
-                        </p>
-                        <span class="conversation-list-item-notification"
-                          >2</span
-                        >
-                      </div>
-                    </div></a
-                  ><span class="content-title conversation-section-title"
-                    >Personal</span
-                  ><a
-                    class="conversation-list-item"
-                    href="/buildings/conversations/3"
-                    ><div class="conversation-list-item-avatars">
-                      <span class="avatar"
-                        ><span class="avatar-image-wrapper"
-                          ><img
-                            alt=""
-                            class="avatar-image"
-                            src="/static/media/a27.a7f49543.jpg"/></span
-                      ></span>
-                    </div>
-                    <div class="conversation-list-item-content">
-                      <div class="conversation-list-item-header">
-                        <h3 class="conversation-list-item-title">
-                          <span>Ivan Copeland</span
-                          ><span class="status-dot green"></span>
-                        </h3>
-                        <span class="conversation-list-item-time"
-                          >Today at 10:22 AM</span
-                        >
-                      </div>
-                      <div class="conversation-list-item-body">
-                        <p class="conversation-list-item-message">
-                          I was watching a tv program on Joanne Lumley in Japan
-                          and she was staying in this sketchy hotel.
-                        </p>
-                      </div>
-                      <div class="conversation-list-item-footer">
-                        <div
-                          class="conversation-list-item-building-image"
-                          style="background-image:url(/static/media/b19.1bbfed41.jpg)"
-                        ></div>
-                        <span class="conversation-list-item-building-name"
-                          >Bauhaus Archive</span
-                        >
-                      </div>
-                    </div></a
-                  ><a
-                    class="conversation-list-item"
-                    href="/buildings/conversations/4"
-                    ><div class="conversation-list-item-avatars">
-                      <span class="avatar"
-                        ><span class="avatar-image-wrapper"
-                          ><span class="avatar-placeholder bg-indigo"
-                            >DS</span
-                          ></span
-                        ></span
-                      >
-                    </div>
-                    <div class="conversation-list-item-content">
-                      <div class="conversation-list-item-header">
-                        <h3 class="conversation-list-item-title">
-                          <span>Delia Saunders</span
-                          ><span class="status-dot green"></span>
-                        </h3>
-                        <span class="conversation-list-item-time"
-                          >Today at 10:19 AM</span
-                        >
-                      </div>
-                      <div class="conversation-list-item-body">
-                        <p class="conversation-list-item-message">
-                          A lady with a 4,5 star rating (4,5 on everything) has
-                          just made a reservation.
-                        </p>
-                      </div>
-                      <div class="conversation-list-item-footer">
-                        <div
-                          class="conversation-list-item-building-image"
-                          style="background-image:url(/static/media/b02.29a6afe5.jpg)"
-                        ></div>
-                        <span class="conversation-list-item-building-name"
-                          >Lloyd's Building</span
-                        >
-                      </div>
-                    </div></a
-                  ><a
-                    class="conversation-list-item"
-                    href="/buildings/conversations/5"
-                    ><div class="conversation-list-item-avatars">
-                      <span class="avatar"
-                        ><span class="avatar-image-wrapper"
-                          ><img
-                            alt=""
-                            class="avatar-image"
-                            src="/static/media/a25.02d948b0.jpg"/></span
-                      ></span>
-                    </div>
-                    <div class="conversation-list-item-content">
-                      <div class="conversation-list-item-header">
-                        <h3 class="conversation-list-item-title">
-                          <span>Lelia Alexander</span>
-                        </h3>
-                        <span class="conversation-list-item-time"
-                          >Today at 10:05 AM</span
-                        >
-                      </div>
-                      <div class="conversation-list-item-body">
-                        <p class="conversation-list-item-message">
-                          You always give good advice. What would you say to
-                          someone asking you about what you do with such
-                          knowledge?
-                        </p>
-                      </div>
-                      <div class="conversation-list-item-footer">
-                        <div
-                          class="conversation-list-item-building-image"
-                          style="background-image:url(/static/media/b05.d40af9fd.jpg)"
-                        ></div>
-                        <span class="conversation-list-item-building-name"
-                          >Dome of the Rock</span
-                        >
-                      </div>
-                    </div></a
-                  ><a
-                    class="conversation-list-item"
-                    href="/buildings/conversations/6"
-                    ><div class="conversation-list-item-avatars">
-                      <span class="avatar"
-                        ><span class="avatar-image-wrapper"
-                          ><img
-                            alt=""
-                            class="avatar-image"
-                            src="/static/media/a13.20ff0828.jpg"/></span
-                      ></span>
-                    </div>
-                    <div class="conversation-list-item-content">
-                      <div class="conversation-list-item-header">
-                        <h3 class="conversation-list-item-title">
-                          <span>Lela Phelps</span>
-                        </h3>
-                        <span class="conversation-list-item-time"
-                          >Today at 5:46 AM</span
-                        >
-                      </div>
-                      <div class="conversation-list-item-body">
-                        <p class="conversation-list-item-message">
-                          Can they leave them at the beach. I just hate it when
-                          my stress levels goes up rocket high.
-                        </p>
-                      </div>
-                      <div class="conversation-list-item-footer">
-                        <div
-                          class="conversation-list-item-building-image"
-                          style="background-image:url(/static/media/b08.417a9467.jpg)"
-                        ></div>
-                        <span class="conversation-list-item-building-name"
-                          >Lotus Temple</span
-                        >
-                      </div>
-                    </div></a
-                  >
-                </div>
+
+            <div class="content-div">
+              <div id="roomviews" class="container-vertical">
+
+                <div class="voice-room-div">Room1</div>
+                <div class="voice-room-div">Room2</div>
+                <div class="voice-room-div">Room3</div>
+
               </div>
+
+              <div>
+
+                roomcontent
+
+              </div>
+            </div>
+
               <div class="container-vertical">
                 <div class="conversation-empty">
-                  <h2>Select conversation to display</h2>
+                  <h2>Select conversation to join</h2>
                 </div>
               </div>
+
+
             </div>
           </div>
         </div>

@@ -2,35 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5868ad2c-4d13-4f03-89e3-bef92b31c5ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/new_web_ui/buildings/dashboard/listing/2/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/new_web_ui/buildings/dashboard/listing/3/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/new_web_ui/buildings/dashboard/listing/4/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/new_web_ui/buildings/dashboard/listing/5/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/new_web_ui/buildings/dashboard/listing/6/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/new_web_ui/buildings/dashboard/listing/7/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/new_web_ui/buildings/dashboard/listing/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/new_web_ui/buildings/listing/singingserver/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/new_web_ui/buildings/server_view/singingserver.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/new_web_ui/static/media/b02.29a6afe5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/new_web_ui/static/media/b08.417a9467.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/new_web_ui/buildings/server_view/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/new_web_ui/buildings/dashboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/new_web_ui/buildings/dashboard/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/new_web_ui/buildings/dashboard/static/media/b19.1bbfed41.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/client/new_web_ui/buildings/dashboard/static/media/b19.1bbfed41.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/new_web_ui/buildings/dashboard/static/media/ua01.85446a95.svg" beforeDir="false" afterPath="$PROJECT_DIR$/client/new_web_ui/buildings/dashboard/static/media/ua01.85446a95.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/new_web_ui/buildings/dashboard/static/media/ua02.b71c26ef.svg" beforeDir="false" afterPath="$PROJECT_DIR$/client/new_web_ui/buildings/dashboard/static/media/ua02.b71c26ef.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/new_web_ui/buildings/listing/1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/new_web_ui/buildings/dashboard/listing/1/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/new_web_ui/static/media/a07.b9388665.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/client/new_web_ui/static/media/a07.b9388665.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/new_web_ui/static/media/b02.29a6afe5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/client/new_web_ui/static/media/b02.29a6afe5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/new_web_ui/static/media/b05.d40af9fd.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/client/new_web_ui/static/media/b05.d40af9fd.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/new_web_ui/static/media/b08.417a9467.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/client/new_web_ui/static/media/b08.417a9467.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/new_web_ui/static/media/b105.bd9188ab.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/client/new_web_ui/static/media/b105.bd9188ab.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/new_web_ui/static/media/b19.1bbfed41.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/client/new_web_ui/static/media/b19.1bbfed41.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/new_web_ui/static/media/ua01.85446a95.svg" beforeDir="false" afterPath="$PROJECT_DIR$/client/new_web_ui/static/media/ua01.85446a95.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/new_web_ui/static/media/ua02.b71c26ef.svg" beforeDir="false" afterPath="$PROJECT_DIR$/client/new_web_ui/static/media/ua02.b71c26ef.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/ui/graphics/settings.svg" beforeDir="false" afterPath="$PROJECT_DIR$/client/ui/graphics/settings.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/ui/main_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/ui/main_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/webui/webui.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/webui/webui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/new_web_ui/buildings/server_view/singingserver.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/new_web_ui/buildings/server_view/singingserver.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,0 +1,16 @@
+.content-div {
+    display: flex;
+}
+
+.voice-room-div {
+
+    padding-left: 3%;
+    padding-right: 1%;
+
+}
+
+.voice-room-div:hover {
+
+    background-color: grey;
+
+}
