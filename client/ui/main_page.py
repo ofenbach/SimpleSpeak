@@ -23,8 +23,8 @@ class MainPage:
             If you  want to access it, think about parsing the communication object to the class __init__ call """
         if self.rooms.GetStringSelection() == "Connect":
             client.start_client()
-        elif self.rooms.GetStringSelection() == "Room 1":
-            print("room switched: Room 1")
+        elif self.rooms.GetStringSelection() == "Room singingserver":
+            print("room switched: Room singingserver")
             client.enter_room("room1")
         elif self.rooms.GetStringSelection() == "Room 2":
             print("room switched: Room 2")
@@ -53,7 +53,7 @@ class MainPage:
 
         # start communication with server
         self.communication = Communication()
-        threading.Thread(target=self.communication.connect, args=("ATOM", "127.0.0.1", 4848)).start()
+        threading.Thread(target=self.communication.connect, args=("ATOM", "127.0.0.singingserver", 4848)).start()
 
         # window stuff
         resolution = (1080, 720)
@@ -109,7 +109,7 @@ class MainPage:
         rooms_text.SetForegroundColour("white")
 
         # replaced with listbox!
-        self.room_list = ["Connect", "Room 1", "Room 2", "Room 3"]   # @l33tlinux TODO: REPLACE WITH DYNAMIC ROOMS (COMMUNICATION.PY USERNAMES_ROOMS DICT)
+        self.room_list = ["Connect", "Room singingserver", "Room 2", "Room 3"]   # @l33tlinux TODO: REPLACE WITH DYNAMIC ROOMS (COMMUNICATION.PY USERNAMES_ROOMS DICT)
         #self.room_list = list(self.communication.usernames_rooms.values())
         self.rooms = wx.ListBox(self.left_panel, size=(190, 360), choices=self.room_list, style=wx.LB_SINGLE)
         self.rooms.SetBackgroundColour("#251C3B")

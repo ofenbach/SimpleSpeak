@@ -14,7 +14,7 @@ class Server:
         self.CHUNK_SIZE = 512
         self.SOCKET = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.SOCKET.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-        self.SOCKET.bind(("127.0.0.1", 4848))   # localhost, change to 0.0.0.0 for deployement
+        self.SOCKET.bind(("127.0.0.singingserver", 4848))   # localhost, change to 0.0.0.0 for deployement
         self.SOCKET.listen()
 
         print("[STARTED] Listening ...")
