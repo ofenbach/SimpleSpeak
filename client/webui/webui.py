@@ -7,7 +7,7 @@ def startUI():
     """ NEW HTML BASED UI """
 
     # where is the html located?
-    eel.init('webui/')
+    eel.init('new_web_ui/buildings/dashboard')
     eel.start('index.html', block=False)
     communication = Communication()
 
@@ -17,7 +17,7 @@ def startUI():
     @eel.expose                             # bridge between javascript and python
     def connect_button_pressed():
         if not communication.connected:
-            threading.Thread(target=communication.connect, args=("ATOM", "127.0.0.1", 4848)).start()
+            threading.Thread(target=communication.connect, args=("ATOM", "135.125.207.61", 4848)).start()
 
     @eel.expose
     def enter_room(room_name):

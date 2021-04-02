@@ -13,7 +13,7 @@ class Microphone:
         self.muted = False
         self.AUDIO_FORMAT = pyaudio.paInt16     # alternative: pyInt32
         self.CHANNELS = 1
-        self.RATE = 48000
+        self.RATE = 44100
 
         # Starting microphone and microphone list
         self.pyaudio = pyaudio.PyAudio()

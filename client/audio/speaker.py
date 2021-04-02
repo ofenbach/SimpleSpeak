@@ -13,7 +13,7 @@ class Speaker:
         self.deaf = False
         self.AUDIO_FORMAT = pyaudio.paInt16
         self.CHANNELS = 1
-        self.RATE = 48000
+        self.RATE = 44100
 
         # starting speaker and speaker list
         self.pyaudio = pyaudio.PyAudio()
@@ -49,6 +49,8 @@ class Speaker:
                         self.playing_stream.write(data)
                     except Exception as e:
                         print("[PLAYING ERROR] " + str(e))
+                        self.COMMUNICATION.disconnect()
+                        self.running = False
             except Exception as e:
                 print("[SPEAKER ERROR] " + str(e))
                 self.COMMUNICATION.disconnect()

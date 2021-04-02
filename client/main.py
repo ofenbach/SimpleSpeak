@@ -1,5 +1,3 @@
-from audio.communication import Communication
-from ui.main_page import MainPage
 import webui.webui
 
 

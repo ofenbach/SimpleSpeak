@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link href="/favicon.ico" rel="shortcut icon" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="#000000" name="theme-color" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      crossorigin="anonymous"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    ></script>
+    <link href="https://stackpath.bootstrapcdn.com" rel="preconnect" />
+    <link href="https://code.jquery.com" rel="preconnect" />
+    <link href="https://cdnjs.cloudflare.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      crossorigin="anonymous"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      crossorigin="anonymous"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:300,400,500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/manifest.json" rel="manifest" />
+    <title>Dashboard UI Kit Preview</title>
+    <link href="/static/css/lib.css" rel="stylesheet" />
+    <link href="/static/css/app.css" rel="stylesheet" />
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div class="outer-events-handler navigator-container">
+        <button class="expandButton" type="button">
+          <i class="uikon">view_list</i>
+        </button>
+        <div class="list">
+          <a class="nav-link-pill" href="/"
+            ><span class="nav-link-text"
+              ><span class="nav-link-left-el"
+                ><i class="uikon">gallery_grid_view</i></span
+              >Screen Previews</span
+            ></a
+          ><a class="nav-link-pill"
+            ><span class="nav-link-text"
+              ><span class="nav-link-left-el"
+                ><i class="uikon">view_simple</i></span
+              >Switch Dark/Light Theme</span
+            ></a
+          >
+          <div class="divider-horizontal"></div>
+          <a
+            class="nav-link-pill"
+            href="https://developer.dashboard-ui.com/docs/react/installation"
+            target="_blank"
+            ><span class="nav-link-text"
+              ><span class="nav-link-left-el"><i class="uikon">rocket</i></span
+              >Installation Guide</span
+            ></a
+          ><a
+            class="nav-link-pill"
+            href="https://developer.dashboard-ui.com/docs/react/installation"
+            target="_blank"
+            ><span class="nav-link-text"
+              ><span class="nav-link-left-el"
+                ><i class="uikon">view_list</i></span
+              >React Docs</span
+            ></a
+          >
+          <div class="divider-horizontal"></div>
+          <a
+            class="nav-link-pill active"
+            href="https://janlosert.com/store/dashboard-ui-kit-3.html?from=docs"
+            ><span class="nav-link-text"
+              ><span class="nav-link-left-el"><i class="uikon">love</i></span
+              >Get Designs (Sketch, ..)</span
+            ></a
+          ><a
+            class="nav-link-pill"
+            href="https://janlosert.com/store/dashboard-ui-kit-3.html?from=docs"
+            ><span class="nav-link-text"
+              ><span class="nav-link-left-el"
+                ><i class="uikon">inbox_paper_round</i></span
+              >Get Previews</span
+            ></a
+          >
+        </div>
+      </div>
+      <div class="container-vertical">
+        <section class="top-bar knowledge-top-bar">
+          <button
+            class="btn knowledge-top-bar-menu-btn"
+            type="button"
+            role="button"
+          >
+            <div class="burger burger-squeeze navigation-burger">
+              <div class="burger-lines"></div>
+            </div>
+          </button>
+          <div class="top-bar-section">
+            <h2 class="top-bar-title"><i class="uikon">help</i>Knowledge</h2>
+          </div>
+          <div class="top-bar-section knowledge-top-bar-actions">
+            <div class="form-group">
+              <div class="input-group input-group-clear">
+                <div class="input-group-prepend">
+                  <i class="uikon">search_left</i>
+                </div>
+                <input
+                  class="form-control"
+                  placeholder="Type to search..."
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="outer-events-handler dropdown btn-group">
+              <span class="top-bar-user-dropdown" role="button"
+                ><span class="avatar"
+                  ><span class="avatar-image-wrapper"
+                    ><img
+                      alt=""
+                      src="/static/media/a10.06b87a5d.jpg"
+                      class="avatar-image"/></span
+                  ><span class="avatar-content"
+                    ><span class="avatar-name">Minnie</span></span
+                  ></span
+                ><i class="uikon top-bar-user-dropdown-arrow"
+                  >arrow_dropdown</i
+                ></span
+              >
+              <div class="dropdown-menu bottom-right">
+                <button class="btn dropdown-item" type="button" role="button">
+                  Settings</button
+                ><button class="btn dropdown-item" type="button" role="button">
+                  Your Profile</button
+                ><button class="btn dropdown-item" type="button" role="button">
+                  Help & Support center</button
+                ><button class="btn dropdown-item" type="button" role="button">
+                  Logout
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="container-horizontal">
+          <div class="scroll-area">
+            <div class="knowledge-home">
+              <div>
+                <h2 class="knowledge-home-title">Knowledge Documentation</h2>
+                <p>Home / All Tutorials</p>
+                <div class="knowledge-list">
+                  <div>
+                    <div class="card knowledge-list-topic card-padding">
+                      <div
+                        class="icon-wrap knowledge-list-topic-icon blue circle"
+                      >
+                        <i class="uikon">love</i>
+                      </div>
+                      <div class="knowledge-list-topic-content">
+                        <h2 class="knowledge-list-topic-title">
+                          <a class="knowledge-list-topic-link"
+                            >Getting Started</a
+                          ><span class="badge knowledge-list-topic-tag green"
+                            >Admin</span
+                          >
+                        </h2>
+                        <p>Last edited 2 days ago by Eugene Jenkins</p>
+                      </div>
+                      <div class="knowledge-list-topic-users">
+                        <span class="avatar"
+                          ><span class="avatar-image-wrapper"
+                            ><img
+                              alt=""
+                              src="/static/media/a01.5a8ba9f1.jpg"
+                              class="avatar-image"/><span
+                              class="avatar-right-el"
+                              ><img
+                                alt="like"
+                                src="/static/media/ua02.b71c26ef.svg"/></span></span></span
+                        ><span class="avatar"
+                          ><span class="avatar-image-wrapper"
+                            ><img
+                              alt=""
+                              src="/static/media/a03.5b4479bc.jpg"
+                              class="avatar-image"/><span
+                              class="avatar-right-el"
+                              ><img
+                                alt="comment"
+                                src="/static/media/ua01.85446a95.svg"/></span></span
+                        ></span>
+                      </div>
+                      <div
+                        class="outer-events-handler dropdown btn-group knowledge-list-topic-action"
+                      >
+                        <button
+                          class="btn dropdown-toggle"
+                          type="button"
+                          role="button"
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          data-toggle="dropdown"
+                        >
+                          Action
+                        </button>
+                        <div class="dropdown-menu bottom-left">
+                          <button
+                            class="btn dropdown-item"
+                            type="button"
+                            role="button"
+                          >
+                            Settings</button
+                          ><button
+                            class="btn dropdown-item"
+                            type="button"
+                            role="button"
+                          >
+                            Your Profile</button
+                          ><button
+                            class="btn dropdown-item"
+                            type="button"
+                            role="button"
+                          >
+                            Help & Support center</button
+                          ><button
+                            class="btn dropdown-item"
+                            type="button"
+                            role="button"
+                          >
+                            Logout
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="card knowledge-list-topic card-padding">
+                      <div
+                        class="icon-wrap knowledge-list-topic-icon indigo circle"
+                      >
+                        <i class="uikon">image_picture</i>
+                      </div>
+                      <div class="knowledge-list-topic-content">
+                        <h2 class="knowledge-list-topic-title">
+                          <a class="knowledge-list-topic-link"
+                            >Responsive Design</a
+                          >
+                        </h2>
+                        <p>Last edited 3 days ago by Erik Page</p>
+                      </div>
+                      <div class="knowledge-list-topic-users">
+                        <span class="avatar"
+                          ><span class="avatar-image-wrapper"
+                            ><img
+                              alt=""
+                              src="/static/media/a04.ab031936.jpg"
+                              class="avatar-image"/><span
+                              class="avatar-right-el"
+                              ><img
+                                alt="comment"
+                                src="/static/media/ua01.85446a95.svg"/></span></span></span
+                        ><span class="avatar"
+                          ><span class="avatar-image-wrapper"
+                            ><img
+                              alt=""
+                              src="/static/media/a01.5a8ba9f1.jpg"
+                              class="avatar-image"/><span
+                              class="avatar-right-el"
+                              ><img
+                                alt="comment"
+                                src="/static/media/ua01.85446a95.svg"/></span></span
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="card knowledge-list-topic card-padding">
+                      <div
+                        class="icon-wrap knowledge-list-topic-icon red circle"
+                      >
+                        <i class="uikon">container</i>
+                      </div>
+                      <div class="knowledge-list-topic-content">
+                        <h2 class="knowledge-list-topic-title">
+                          <a class="knowledge-list-topic-link"
+                            >Layout & Positioning Basics</a
+                          >
+                        </h2>
+                        <p>Last edited a week ago by Joana Jenkins</p>
+                      </div>
+                      <div class="knowledge-list-topic-users">
+                        <span class="avatar"
+                          ><span class="avatar-image-wrapper"
+                            ><img
+                              alt=""
+                              src="/static/media/a03.5b4479bc.jpg"
+                              class="avatar-image"/><span
+                              class="avatar-right-el"
+                              ><img
+                                alt="comment"
+                                src="/static/media/ua01.85446a95.svg"/></span></span></span
+                        ><span class="avatar"
+                          ><span class="avatar-image-wrapper"
+                            ><img
+                              alt=""
+                              src="/static/media/a02.a4579852.jpg"
+                              class="avatar-image"/><span
+                              class="avatar-right-el"
+                              ><img
+                                alt="comment"
+                                src="/static/media/ua01.85446a95.svg"/></span></span
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="card knowledge-list-topic card-padding">
+                      <div
+                        class="icon-wrap knowledge-list-topic-icon green circle"
+                      >
+                        <i class="uikon">edit</i>
+                      </div>
+                      <div class="knowledge-list-topic-content">
+                        <h2 class="knowledge-list-topic-title">
+                          <a class="knowledge-list-topic-link"
+                            >Photoshop Fundamentals</a
+                          ><span class="badge knowledge-list-topic-tag green"
+                            >Admin</span
+                          >
+                        </h2>
+                        <p>Last edited a week ago by Todd Singleton</p>
+                      </div>
+                      <div class="knowledge-list-topic-users">
+                        <span class="avatar"
+                          ><span class="avatar-image-wrapper"
+                            ><img
+                              alt=""
+                              src="/static/media/a04.ab031936.jpg"
+                              class="avatar-image"/><span
+                              class="avatar-right-el"
+                              ><img
+                                alt="like"
+                                src="/static/media/ua02.b71c26ef.svg"/></span></span></span
+                        ><span class="avatar"
+                          ><span class="avatar-image-wrapper"
+                            ><img
+                              alt=""
+                              src="/static/media/a02.a4579852.jpg"
+                              class="avatar-image"/><span
+                              class="avatar-right-el"
+                              ><img
+                                alt="comment"
+                                src="/static/media/ua01.85446a95.svg"/></span></span
+                        ></span>
+                      </div>
+                      <div
+                        class="outer-events-handler dropdown btn-group knowledge-list-topic-action"
+                      >
+                        <button
+                          class="btn dropdown-toggle"
+                          type="button"
+                          role="button"
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          data-toggle="dropdown"
+                        >
+                          Action
+                        </button>
+                        <div class="dropdown-menu bottom-left">
+                          <button
+                            class="btn dropdown-item"
+                            type="button"
+                            role="button"
+                          >
+                            Settings</button
+                          ><button
+                            class="btn dropdown-item"
+                            type="button"
+                            role="button"
+                          >
+                            Your Profile</button
+                          ><button
+                            class="btn dropdown-item"
+                            type="button"
+                            role="button"
+                          >
+                            Help & Support center</button
+                          ><button
+                            class="btn dropdown-item"
+                            type="button"
+                            role="button"
+                          >
+                            Logout
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="card knowledge-list-topic card-padding">
+                      <div
+                        class="icon-wrap knowledge-list-topic-icon orange circle"
+                      >
+                        <i class="uikon">gallery_grid_view</i>
+                      </div>
+                      <div class="knowledge-list-topic-content">
+                        <h2 class="knowledge-list-topic-title">
+                          <a class="knowledge-list-topic-link"
+                            >Sketch Fundamentals</a
+                          >
+                        </h2>
+                        <p>Last edited a week ago by Erik Page</p>
+                      </div>
+                      <div class="knowledge-list-topic-users">
+                        <span class="avatar"
+                          ><span class="avatar-image-wrapper"
+                            ><img
+                              alt=""
+                              src="/static/media/a03.5b4479bc.jpg"
+                              class="avatar-image"/><span
+                              class="avatar-right-el"
+                              ><img
+                                alt="comment"
+                                src="/static/media/ua01.85446a95.svg"/></span></span></span
+                        ><span class="avatar"
+                          ><span class="avatar-image-wrapper"
+                            ><img
+                              alt=""
+                              src="/static/media/a01.5a8ba9f1.jpg"
+                              class="avatar-image"/><span
+                              class="avatar-right-el"
+                              ><img
+                                alt="like"
+                                src="/static/media/ua02.b71c26ef.svg"/></span></span
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="card knowledge-list-topic card-padding">
+                      <div
+                        class="icon-wrap knowledge-list-topic-icon indigo circle"
+                      >
+                        <i class="uikon">image_picture</i>
+                      </div>
+                      <div class="knowledge-list-topic-content">
+                        <h2 class="knowledge-list-topic-title">
+                          <a class="knowledge-list-topic-link"
+                            >Advanced Sketch</a
+                          >
+                        </h2>
+                        <p>Last edited a week ago by Myrtie Greer</p>
+                      </div>
+                      <div class="knowledge-list-topic-users">
+                        <span class="avatar"
+                          ><span class="avatar-image-wrapper"
+                            ><img
+                              alt=""
+                              src="/static/media/a03.5b4479bc.jpg"
+                              class="avatar-image"/><span
+                              class="avatar-right-el"
+                              ><img
+                                alt="like"
+                                src="/static/media/ua02.b71c26ef.svg"/></span></span></span
+                        ><span class="avatar"
+                          ><span class="avatar-image-wrapper"
+                            ><img
+                              alt=""
+                              src="/static/media/a02.a4579852.jpg"
+                              class="avatar-image"/><span
+                              class="avatar-right-el"
+                              ><img
+                                alt="like"
+                                src="/static/media/ua02.b71c26ef.svg"/></span></span
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="card knowledge-list-topic card-padding">
+                      <div
+                        class="icon-wrap knowledge-list-topic-icon orange circle"
+                      >
+                        <i class="uikon">multitasking</i>
+                      </div>
+                      <div class="knowledge-list-topic-content">
+                        <h2 class="knowledge-list-topic-title">
+                          <a class="knowledge-list-topic-link"
+                            >How to setup 1170px grid in Sketch</a
+                          >
+                        </h2>
+                        <p>Last edited a week ago by Myrtie Greer</p>
+                      </div>
+                      <div class="knowledge-list-topic-users">
+                        <span class="avatar"
+                          ><span class="avatar-image-wrapper"
+                            ><img
+                              alt=""
+                              src="/static/media/a02.a4579852.jpg"
+                              class="avatar-image"/><span
+                              class="avatar-right-el"
+                              ><img
+                                alt="like"
+                                src="/static/media/ua02.b71c26ef.svg"/></span></span
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="knowledge-home-menu-container">
+                <div class="card">
+                  <div class="card-header"><h3>Navigation</h3></div>
+                  <a class="card-link"
+                    ><div class="icon-wrap card-link-icon blue square">
+                      <i class="uikon">love</i>
+                    </div>
+                    <span class="card-link-title">For Beginners</span
+                    ><span class="card-link-count">17</span></a
+                  ><a class="card-link"
+                    ><div class="icon-wrap card-link-icon violet square">
+                      <i class="uikon">image_picture</i>
+                    </div>
+                    <span class="card-link-title">Advanced Techniques</span
+                    ><span class="card-link-count">18</span></a
+                  ><a class="card-link"
+                    ><div class="icon-wrap card-link-icon red square">
+                      <i class="uikon">container</i>
+                    </div>
+                    <span class="card-link-title">Design Principles</span
+                    ><span class="card-link-count">1</span></a
+                  ><a class="card-link"
+                    ><div class="icon-wrap card-link-icon orange square">
+                      <i class="uikon">gallery_grid_view</i>
+                    </div>
+                    <span class="card-link-title">Integrations</span
+                    ><span class="card-link-count">12</span></a
+                  ><a class="card-link"
+                    ><div class="icon-wrap card-link-icon square">
+                      <i class="uikon">multitasking</i>
+                    </div>
+                    <span class="card-link-title">Others</span
+                    ><span class="card-link-count">7</span></a
+                  ><a class="card-link"
+                    ><span class="card-link-title">Without icon here</span
+                    ><span class="card-link-count">12</span></a
+                  ><a class="card-link"
+                    ><span class="card-link-title"
+                      >Just a navigation title</span
+                    ></a
+                  >
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <h3>Popular Video Tutorials</h3>
+                  </div>
+                  <div class="knowledge-video-preview-container">
+                    <a class="card-video-preview"
+                      ><div
+                        class="card-video-preview-image"
+                        style="background-image:url(/static/media/vt01.58c87703.jpg)"
+                      ></div>
+                      <div>
+                        <h4 class="card-video-preview-title">
+                          Your first platform
+                        </h4>
+                        <span class="card-video-preview-views"
+                          >Views: 3874</span
+                        >
+                      </div></a
+                    ><a class="card-video-preview"
+                      ><div
+                        class="card-video-preview-image"
+                        style="background-image:url(/static/media/vt05.f1ea6cd0.jpg)"
+                      ></div>
+                      <div>
+                        <h4 class="card-video-preview-title">
+                          Intro to web design
+                        </h4>
+                        <span class="card-video-preview-views"
+                          >Views: 19238</span
+                        >
+                      </div></a
+                    ><a class="card-video-preview"
+                      ><div
+                        class="card-video-preview-image"
+                        style="background-image:url(/static/media/vt04.2462692d.jpg)"
+                      ></div>
+                      <div>
+                        <h4 class="card-video-preview-title">Web elements</h4>
+                        <span class="card-video-preview-views"
+                          >Views: 2843</span
+                        >
+                      </div></a
+                    ><a class="card-video-preview"
+                      ><div
+                        class="card-video-preview-image"
+                        style="background-image:url(/static/media/vt03.12822a9d.jpg)"
+                      ></div>
+                      <div>
+                        <h4 class="card-video-preview-title">CSS styling</h4>
+                        <span class="card-video-preview-views"
+                          >Views: 16482</span
+                        >
+                      </div></a
+                    ><a class="card-video-preview"
+                      ><div
+                        class="card-video-preview-image"
+                        style="background-image:url(/static/media/vt02.58ab8e29.jpg)"
+                      ></div>
+                      <div>
+                        <h4 class="card-video-preview-title">
+                          Interaction & Animations
+                        </h4>
+                        <span class="card-video-preview-views"
+                          >Views: 7894</span
+                        >
+                      </div></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+  </body>
+</html>
