@@ -7,8 +7,8 @@ def startUI():
     """ NEW HTML BASED UI """
 
     # where is the html located?
-    eel.init('new_web_ui')
-    eel.start('/buildings/dashboard/index.html', block=False)
+    eel.init('webui')
+    eel.start('index.html', block=False)
     communication = Communication()
 
     ################ BEGIN UI ################
