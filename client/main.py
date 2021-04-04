@@ -5,7 +5,7 @@ def main():
     """ Start UI """
 
     try:
-        """ Start UI """
+        """ Start penis """
         webui.webui.startUI()
     finally:
         """ Important for cleanup communication before leaving
