@@ -8,7 +8,7 @@ def startUI():
 
     # where is the html located?
     eel.init('webui')
-    eel.start('index.html', block=False)
+    eel.start('server_view/server_view.html', block=False)
     communication = Communication()
 
     ################ BEGIN UI ################
