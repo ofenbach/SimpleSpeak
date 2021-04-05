@@ -70,7 +70,7 @@ class Server:
                 # I     Do not send audio to server (self)
                 # II    Do not send to sender again (speaking client) (ERROR?!) and user.get_socket() != sender.get_socket()
                 # III   Do only send to users in same room #and user.get_room() == sender.get_room()
-                if user.get_socket() != self.SOCKET and user.get_socket() != sender.get_socket() and user.get_room() == sender.get_room():   # not server, not himself and same room
+                if user.get_socket() != self.SOCKET and user.get_room() == sender.get_room():   # not server, not himself and same room
                     user.send(data)
 
             except Exception as e:
@@ -100,10 +100,13 @@ class Server:
 
     def disconnect_user(self, user):
         """ Kick specific user out of server """
+
+        print("USER KICKED! ", user.get_username())
         user.kick()
         self.users.remove(user)
         for user in self.users:
             user.send_string("DISCONNECT_" + str(user.get_username()) + "_END")
+
         print("[USERS ONLINE]")
         for user_ in self.users:
             print(user_.get_username())

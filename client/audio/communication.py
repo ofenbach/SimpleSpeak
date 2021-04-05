@@ -2,8 +2,8 @@ import socket
 import ast
 import pyaudio
 
-from client.audio.microphone import Microphone
-from client.audio.speaker import Speaker
+from audio.microphone import Microphone
+from audio.speaker import Speaker
 
 
 class Communication:
@@ -24,7 +24,7 @@ class Communication:
                                     Example:    {"JoeRogan": "Room1"} """
         self.connected = False
         self.SOCKET = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.CHUNK_SIZE = 1024
+        self.CHUNK_SIZE = 512
         self.usernames_rooms = {}
         self.pyaudio = pyaudio.PyAudio()
 
@@ -109,8 +109,8 @@ class Communication:
     def handle_message(self, string_data):
         """ Interprets the messages inside the string_data """
         if "DISCONNECT" in string_data:
-            pass    # UPDATE UI!
+            print("disconecct")
         if "ROOMSWITCH" in string_data:
-            pass    # UPDATE UI!
+            print("Roomswtich")
         if "USERJOIN" in string_data:
-            pass    # UPDATE UI!
+            print("Userjoin")
