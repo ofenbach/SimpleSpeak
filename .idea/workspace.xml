@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5868ad2c-4d13-4f03-89e3-bef92b31c5ea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/webui/server_view/javascript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/webui/static/media/Icon.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/webui.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/webui.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/webui/server_view/server_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/webui/server_view/server_view.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/webui/server_view/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/webui/server_view/style.css" afterDir="false" />
     </list>
@@ -47,6 +50,7 @@
       <recent name="C:\Users\Tim Ofenbach\Documents\GitHub\SimpleSpeak\client\webui" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tim Ofenbach\Documents\GitHub\SimpleSpeak\client\webui\static\media" />
       <recent name="C:\Users\Tim Ofenbach\Documents\GitHub\SimpleSpeak\client\ui\graphics" />
     </key>
   </component>

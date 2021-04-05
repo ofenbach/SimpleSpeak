@@ -21,7 +21,10 @@ def startUI():
 
     @eel.expose
     def enter_room(room_name):
-        communication.send_message("ROOMSWITCH_"+communication.USERNAME+"_"+str(room_name)+"_END")
+        pass
+        #communication.send_message("ROOMSWITCH_"+communication.USERNAME+"_"+str(room_name)+"_END")
+
+        # todo: call javascript function to dynamically display users
 
     @eel.expose
     def mute_button_pressed():

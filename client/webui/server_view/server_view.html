@@ -7,6 +7,10 @@
 		<link href="/static/css/lib.css" rel="stylesheet">
 		<link href="/static/css/app.css" rel="stylesheet">
 		<link href="style.css" rel="stylesheet">
+
+		<!-- EEL Scripts -->
+		<script src="/eel.js"></script>
+		<script src="javascript.js"></script>
 	</head>
 
 	<body>
@@ -95,15 +99,27 @@
 						</section>
 
 						<!-- Actual Content -->
-						<div class="container-vertical">
+						<div class="container-horizontal">
 
 							<!-- Room bar -->
 							<div class="container-voicerooms">
-								<div class="voice-room-div-1">Room1</div>
-								<div class="voice-room-div-2">Room2</div>
-								<div class="voice-room-div-3">Room3</div>
 
+								<span class="nav-section-title">Singing Server Test</span>
 
+								<div class="voice-room-div" type="button" onclick="enter_room('room1')">
+									<img class = "roomicon" src="/static/media/icon.svg"/>
+									Room1
+								</div>
+
+								<div class="voice-room-div" onclick="enter_room('room2')">
+									<img class = "roomicon" src="/static/media/icon.svg"/>
+									Room2
+								</div>
+
+								<div class="voice-room-div" onclick="enter_room('room3')">
+									<img class = "roomicon" src="/static/media/icon.svg"/>
+									Room2
+								</div>
 
 							</div>
 
