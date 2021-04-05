@@ -17,8 +17,6 @@ class Speaker:
         self.pyaudio = PYAUDIO
 
         # starting speaker and speaker list
-        print("[AVAILABLE SPEAKERS]")  # TODO
-        print("################")
         self.playing_stream = self.pyaudio.open(format=self.AUDIO_FORMAT, channels=self.CHANNELS, rate=self.RATE,
                                                 output=True, frames_per_buffer=self.CHUNK_SIZE)
 

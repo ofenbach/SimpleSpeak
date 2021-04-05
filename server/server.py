@@ -68,9 +68,9 @@ class Server:
             try:
 
                 # I     Do not send audio to server (self)
-                # II    Do not send to sender again (speaking client) (ERROR?!)
-                # III   Do only send to users in same room
-                if user.get_socket() != self.SOCKET and user.get_socket() != sender.get_socket() and user.get_room() == sender.get_room():   # not server, not himself and same room
+                # II    Do not send to sender again (speaking client) (ERROR?!) and user.get_socket() != sender.get_socket()
+                # III   Do only send to users in same room #and user.get_room() == sender.get_room()
+                if user.get_socket() != self.SOCKET and user.get_room() == sender.get_room():   # not server, not himself and same room
                     user.send(data)
 
             except Exception as e:

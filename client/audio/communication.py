@@ -2,8 +2,8 @@ import socket
 import ast
 import pyaudio
 
-from audio.microphone import Microphone
-from audio.speaker import Speaker
+from client.audio.microphone import Microphone
+from client.audio.speaker import Speaker
 
 
 class Communication:
@@ -53,9 +53,9 @@ class Communication:
             return self.connected
 
         # starting devices (start their own threads)
-        self.AUDIO_FORMAT = pyaudio.paInt16  # alternative: pyInt32
+        self.AUDIO_FORMAT = pyaudio.paInt32  # alternative: pyInt32
         self.CHANNELS = 1
-        self.RATE = 44100
+        self.RATE = 48000
         self.microphone = Microphone(self, self.pyaudio, self.CHUNK_SIZE, self.AUDIO_FORMAT, self.CHANNELS, self.RATE)
         self.speaker = Speaker(self, self.pyaudio, self.CHUNK_SIZE, self.AUDIO_FORMAT, self.CHANNELS, self.RATE)
 

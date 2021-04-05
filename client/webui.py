@@ -10,6 +10,7 @@ def startUI():
     eel.init('webui')
     eel.start('server_view/server_view.html', block=False)
     communication = Communication()
+    #communication.connect("Tim", "135.125.207.61", 4747)
     threading.Thread(target=communication.connect, args=("Mohammed", "135.125.207.61", 4747)).start()
 
     ################ BEGIN UI ################
@@ -72,7 +73,8 @@ def startUI():
     # keep refreshing UI
     while True:
         try:
-            update_users()
+            pass
+            #update_users()
         except:
             pass
-        eel.sleep(5)
+        eel.sleep(100)

@@ -4,9 +4,10 @@
     <list default="true" id="5868ad2c-4d13-4f03-89e3-bef92b31c5ea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/audio/communication.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/audio/communication.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/audio/microphone.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/audio/microphone.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/audio/speaker.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/audio/speaker.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/webui.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/webui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/webui/server_view/server_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/webui/server_view/server_view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/webui/static/media/a07.b9388665.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/client/webui/static/media/profilepic.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
