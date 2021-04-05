@@ -102,23 +102,28 @@
 						<div class="container-horizontal">
 
 							<!-- Room bar -->
-							<div class="container-voicerooms">
+							<div id="container-voicerooms" class="container-voicerooms">
 
 								<span class="nav-section-title">Singing Server Test</span>
 
-								<div class="voice-room-div" type="button" onclick="enter_room('room1')">
+								<div class="voice-room-div" id="room1_button" type="button" onclick="enter_room('room1')">
 									<img class = "roomicon" src="/static/media/icon.svg"/>
 									Room1
 								</div>
 
-								<div class="voice-room-div" onclick="enter_room('room2')">
+								<div class="voice-room-div" id="room2_button" onclick="enter_room('room2')">
 									<img class = "roomicon" src="/static/media/icon.svg"/>
 									Room2
 								</div>
 
-								<div class="voice-room-div" onclick="enter_room('room3')">
+								<div class="voice-room-div" id="room3_button" onclick="enter_room('room3')">
 									<img class = "roomicon" src="/static/media/icon.svg"/>
 									Room2
+								</div>
+
+								<p class="users-online-text" id="users_online_text"></p>
+								<div id="container-online-users">
+
 								</div>
 
 							</div>
