@@ -11,7 +11,7 @@ class Speaker:
 
         # audio settings TODO: channels = 2? Caused some bugs
         self.deaf = False
-        self.AUDIO_FORMAT = pyaudio.paInt16
+        self.AUDIO_FORMAT = pyaudio.paInt32
         self.CHANNELS = 1
         self.RATE = 48000
 

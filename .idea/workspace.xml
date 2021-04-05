@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5868ad2c-4d13-4f03-89e3-bef92b31c5ea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/audio/microphone.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/audio/microphone.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/audio/speaker.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/audio/speaker.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/webui.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/webui.py" afterDir="false" />
     </list>

@@ -11,7 +11,7 @@ class Microphone:
         self.COMMUNICATION = COMMUNICATION
         self.CHUNK_SIZE = CHUNK_SIZE            # good value: 2048
         self.muted = False
-        self.AUDIO_FORMAT = pyaudio.paInt16     # alternative: pyInt32
+        self.AUDIO_FORMAT = pyaudio.paInt32     # alternative: pyInt32
         self.CHANNELS = 1
         self.RATE = 48000
 
