@@ -10,7 +10,7 @@ def startUI():
     eel.init('webui')
     eel.start('server_view/server_view.html', block=False)
     communication = Communication()
-    threading.Thread(target=communication.connect, args=("ATOM", "135.125.207.61", 4848)).start()
+    threading.Thread(target=communication.connect, args=("Tim", "135.125.207.61", 4848)).start()
 
     ################ BEGIN UI ################
 
@@ -18,7 +18,7 @@ def startUI():
     @eel.expose                             # bridge between javascript and python
     def connect_button_pressed():
         if not communication.connected:
-            threading.Thread(target=communication.connect, args=("ATOM", "135.125.207.61", 4848)).start()
+            threading.Thread(target=communication.connect, args=("Tim!", "135.125.207.61", 4848)).start()
 
     @eel.expose
     def enter_room(room_name):
