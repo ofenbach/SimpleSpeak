@@ -4,19 +4,19 @@ import pyaudio
 
 class Microphone:
 
-    def __init__(self, COMMUNICATION, CHUNK_SIZE: int):
+    def __init__(self, COMMUNICATION, PYAUDIO, CHUNK_SIZE: int, AUDIO_FORMAT, CHANNELS, RATE):
         """ Initialize default values for recording """
 
         # audio settings
         self.COMMUNICATION = COMMUNICATION
         self.CHUNK_SIZE = CHUNK_SIZE            # good value: 2048
         self.muted = False
-        self.AUDIO_FORMAT = pyaudio.paInt32     # alternative: pyInt32
-        self.CHANNELS = 1
-        self.RATE = 48000
+        self.AUDIO_FORMAT = AUDIO_FORMAT     # alternative: pyInt32
+        self.CHANNELS = CHANNELS
+        self.RATE = RATE
+        self.pyaudio = PYAUDIO
 
         # Starting microphone and microphone list
-        self.pyaudio = pyaudio.PyAudio()
         self.display_mics()
         self.recording_stream = self.pyaudio.open(format=self.AUDIO_FORMAT, channels=self.CHANNELS, rate=self.RATE, input=True, frames_per_buffer=self.CHUNK_SIZE)
 

@@ -5,18 +5,18 @@ import pyaudio
 class Speaker:
     """ Handles received data, which can be audio or messages """
 
-    def __init__(self, COMMUNICATION, CHUNK_SIZE: int):
+    def __init__(self, COMMUNICATION, PYAUDIO, CHUNK_SIZE: int, AUDIO_FORMAT, CHANNELS, RATE):
         self.COMMUNICATION = COMMUNICATION
         self.CHUNK_SIZE = CHUNK_SIZE
 
         # audio settings TODO: channels = 2? Caused some bugs
         self.deaf = False
-        self.AUDIO_FORMAT = pyaudio.paInt32
-        self.CHANNELS = 1
-        self.RATE = 48000
+        self.AUDIO_FORMAT = AUDIO_FORMAT
+        self.CHANNELS = CHANNELS
+        self.RATE = RATE
+        self.pyaudio = PYAUDIO
 
         # starting speaker and speaker list
-        self.pyaudio = pyaudio.PyAudio()
         print("[AVAILABLE SPEAKERS]")  # TODO
         print("################")
         self.playing_stream = self.pyaudio.open(format=self.AUDIO_FORMAT, channels=self.CHANNELS, rate=self.RATE,

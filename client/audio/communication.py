@@ -1,5 +1,6 @@
 import socket
 import ast
+import pyaudio
 
 from audio.microphone import Microphone
 from audio.speaker import Speaker
@@ -25,6 +26,7 @@ class Communication:
         self.SOCKET = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.CHUNK_SIZE = 1024
         self.usernames_rooms = {}
+        self.pyaudio = pyaudio.PyAudio()
 
 
     def connect(self, USERNAME: str, IP: str, PORT: int):
@@ -51,12 +53,15 @@ class Communication:
             return self.connected
 
         # starting devices (start their own threads)
-        self.microphone = Microphone(self, self.CHUNK_SIZE)
-        self.speaker = Speaker(self, self.CHUNK_SIZE)
+        self.AUDIO_FORMAT = pyaudio.paInt16  # alternative: pyInt32
+        self.CHANNELS = 1
+        self.RATE = 44100
+        self.microphone = Microphone(self, self.pyaudio, self.CHUNK_SIZE, self.AUDIO_FORMAT, self.CHANNELS, self.RATE)
+        self.speaker = Speaker(self, self.pyaudio, self.CHUNK_SIZE, self.AUDIO_FORMAT, self.CHANNELS, self.RATE)
 
-        while self.connected:
+        """ while self.connected:
             pass
-        self.disconnect()
+        self.disconnect()"""
 
 
     def disconnect(self):
