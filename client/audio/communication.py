@@ -24,7 +24,7 @@ class Communication:
                                     Example:    {"JoeRogan": "Room1"} """
         self.connected = False
         self.SOCKET = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.CHUNK_SIZE = 512
+        self.CHUNK_SIZE = 1024
         self.usernames_rooms = {}
         self.pyaudio = pyaudio.PyAudio()
 
@@ -40,9 +40,8 @@ class Communication:
         # connecting ...
         try:
             self.SOCKET.connect(self.SERVER)
-            self.SOCKET.send(self.USERNAME.encode())
-            self.usernames_rooms = self.SOCKET.recv(self.CHUNK_SIZE).decode()
-            print(self.usernames_rooms)
+            self.SOCKET.send(self.USERNAME.encode())                            # send username
+            self.usernames_rooms = self.SOCKET.recv(self.CHUNK_SIZE).decode('utf-8', 'ignore')   # receives usernames
             self.usernames_rooms = ast.literal_eval(self.usernames_rooms)       # convert string representation of dict to dict
             self.connected = True
             print("[CONNECTED] " + str(self.SERVER))
@@ -79,7 +78,7 @@ class Communication:
         """ Sends data to server
             @param data:    bytestring object to send """
         try:
-            self.SOCKET.send(data)
+            self.SOCKET.sendall(data)
         except Exception as e:
             print("[DATASEND ERROR] " + str(e))
             self.disconnect()

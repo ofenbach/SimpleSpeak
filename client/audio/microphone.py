@@ -7,19 +7,18 @@ class Microphone:
 
         # audio settings
         self.COMMUNICATION = COMMUNICATION
+        self.pyaudio = PYAUDIO
         self.CHUNK_SIZE = CHUNK_SIZE            # good value: 2048
         self.muted = False
         self.AUDIO_FORMAT = AUDIO_FORMAT     # alternative: pyInt32
         self.CHANNELS = CHANNELS
         self.RATE = RATE
-        self.pyaudio = PYAUDIO
 
         # Starting microphone and microphone list
         self.display_mics()
         self.recording_stream = self.pyaudio.open(format=self.AUDIO_FORMAT, channels=self.CHANNELS, rate=self.RATE, input=True, frames_per_buffer=self.CHUNK_SIZE)
 
         # start recording thread
-        self.running = True
         threading.Thread(target=self.start_recording).start()
 
 
@@ -27,10 +26,11 @@ class Microphone:
         """ Starts recording the microphone and sending the data to the Server """
 
         print("[MICROPHONE] Started sending data ...")
+        self.running = True
         while self.running:
             try:
                 if not self.muted:
-                    data = self.recording_stream.read(self.CHUNK_SIZE)      # OPTIONAL: exception_on_overflow=False
+                    data = self.recording_stream.read(self.CHUNK_SIZE, exception_on_overflow = False)
                     self.COMMUNICATION.send_data(data)
             except Exception as e:
                 print("[MICROPHONE ERROR] " + str(e))

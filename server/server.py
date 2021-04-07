@@ -14,7 +14,7 @@ class Server:
         self.CHUNK_SIZE = 1024
         self.SOCKET = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.SOCKET.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-        self.SOCKET.bind(("0.0.0.0", 4747))   # localhost, change to 0.0.0.0 for deployement
+        self.SOCKET.bind(("0.0.0.0", 4747))
         self.SOCKET.listen()
 
         print("[STARTED] Listening ...")
@@ -22,25 +22,28 @@ class Server:
             # waiting for connection ...
 
             # connection received
-            user_socket, addr = self.SOCKET.accept()
-            username = user_socket.recv(self.CHUNK_SIZE).decode('utf-8','ignore')
-            for user in self.users:
-                user.send_string(("USERJOIN_" + str(username) + "_END").encode('utf-8','ignore'))
+            user_socket, user_ip = self.SOCKET.accept()
+            username = user_socket.recv(self.CHUNK_SIZE).decode('utf-8','ignore')   # receive username
 
             # update own userbase
-            user = User(user_socket,addr,username)
-            self.users.append(user)
+            new_user = User(user_socket,user_ip, username)
+            self.users.append(new_user)
+
+            # send user connected users and new user to connected users
             usernames = {}
             for user in self.users:
                 usernames[user.get_username()] = user.get_room()
-            user.send_string(usernames)
-            print("[CONNECTED] ", user.get_username())
+                user.send_string("USERJOIN_" + str(username) + "_END")
+            new_user.send_string(usernames)                              # send users
+
+            # update terminal info
+            print("[CONNECTED] ", new_user.get_username())
             print("[USERS ONLINE]")
             for user in self.users:
                 print(user.get_username())
 
             # start thread
-            threading.Thread(target=self.receive_data, args=(user,)).start()
+            threading.Thread(target=self.receive_data, args=(new_user,)).start()
 
 
     def receive_data(self, user):
@@ -50,14 +53,20 @@ class Server:
         while True:
             try:
                 data = user.get_socket().recv(self.CHUNK_SIZE)
-                string_data = data.decode('utf-8', 'ignore')
 
-                if "DISCONNECT" in string_data or "ROOMSWITCH" in string_data:
-                    self.handle_message(user, string_data)
-                else:
-                    self.handle_audio(user, data)
+                try:
+                    string_data = data.decode('utf-8', 'ignore')
 
-            except:
+                    if "DISCONNECT" in string_data or "ROOMSWITCH" in string_data:
+                        self.handle_message(user, string_data)
+                    else:
+                        self.handle_audio(user, data)
+                except Exception as e:
+                    print("[STRINDATA] ", e)
+                    raise Exception(str(e))
+
+            except Exception as e:
+                print("RECV ERROR: ", e)
                 self.disconnect_user(user)
                 break
 
@@ -70,7 +79,7 @@ class Server:
                 # I     Do not send audio to server (self)
                 # II    Do not send to sender again (speaking client) (ERROR?!) and user.get_socket() != sender.get_socket()
                 # III   Do only send to users in same room #and user.get_room() == sender.get_room()
-                if user.get_socket() != self.SOCKET and user.get_room() == sender.get_room():   # not server, not himself and same room
+                if user.get_socket() != self.SOCKET and user.get_socket() != sender.get_socket() and user.get_room() == sender.get_room():   # not server, not himself and same room
                     user.send(data)
 
             except Exception as e:

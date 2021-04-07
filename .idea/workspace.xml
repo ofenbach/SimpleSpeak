@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5868ad2c-4d13-4f03-89e3-bef92b31c5ea" name="Default Changelist" comment="" />
+    <list default="true" id="5868ad2c-4d13-4f03-89e3-bef92b31c5ea" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/SimpleSpeak.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/audio/communication.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/audio/communication.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/audio/microphone.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/audio/microphone.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/audio/speaker.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/audio/speaker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/webui.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/webui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/user.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,17 +69,17 @@
   </component>
   <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="SimpleSpeak" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\Tim Ofenbach\AppData\Local\Programs\Python\Python39\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/client" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/client/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -140,6 +152,12 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.main_page" />
+      <item itemvalue="Python.server" />
+      <item itemvalue="Python.webui" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />

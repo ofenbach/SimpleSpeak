@@ -1,3 +1,7 @@
+import socket
+#import opus
+#from opus import decoder as opus_decoder
+#from opus import encoder as opus_encoder
 
 class User:
     """ Creates new user object which stores some information about the connected client """
@@ -8,11 +12,12 @@ class User:
         self.USERNAME = USERNAME
         self.room = "connectROOM"
 
-    def send_string(self, string_data):
-        self.SOCKET.send(str(string_data).encode())
+    def send_string(self, string_data: str):
+        """ Convert stringdata to actual data """
+        self.SOCKET.send(str(string_data).encode('utf-8', 'ignore'))
 
     def send(self, data):
-        """ Streambyte data """
+        """ Byte data """
         self.SOCKET.send(data)
 
     def kick(self):

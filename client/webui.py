@@ -6,11 +6,11 @@ from audio.communication import Communication
 def startUI():
     """ NEW HTML BASED UI """
     communication = Communication()
-    threading.Thread(target=communication.connect, args=("TIM!", "135.125.207.61", 4747)).start()
-    # communication.connect("Tim", "135.125.207.61", 4747)
+    #threading.Thread(target=communication.connect, args=("TIM!", "135.125.207.61", 4747)).start()
+    communication.connect("Tim", "135.125.207.61", 4747)
 
     # where is the html located?
-    eel.init('webui')
+    """eel.init('webui')
     eel.start('dashboard/index.html', block=False)
 
     ################ BEGIN UI ################
@@ -77,4 +77,4 @@ def startUI():
             #update_users()
         except:
             pass
-        eel.sleep(100)
+        eel.sleep(100)"""
