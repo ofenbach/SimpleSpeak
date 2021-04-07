@@ -7,7 +7,7 @@ def startUI():
     """ NEW HTML BASED UI """
     communication = Communication()
     #threading.Thread(target=communication.connect, args=("TIM!", "135.125.207.61", 4747)).start()
-    communication.connect("Tim", "135.125.207.61", 4747)
+    communication.connect("REALTIM", "135.125.207.61", 4747)
 
     # where is the html located?
     """eel.init('webui')

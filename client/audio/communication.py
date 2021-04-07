@@ -42,6 +42,7 @@ class Communication:
             self.SOCKET.connect(self.SERVER)
             self.SOCKET.send(self.USERNAME.encode())                            # send username
             self.usernames_rooms = self.SOCKET.recv(self.CHUNK_SIZE).decode('utf-8', 'ignore')   # receives usernames
+            print(self.usernames_rooms)
             self.usernames_rooms = ast.literal_eval(self.usernames_rooms)       # convert string representation of dict to dict
             self.connected = True
             print("[CONNECTED] " + str(self.SERVER))

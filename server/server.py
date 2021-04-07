@@ -33,13 +33,13 @@ class Server:
             usernames = {}
             for user in self.users:
                 usernames[user.get_username()] = user.get_room()
-                user.send_string("USERJOIN_" + str(username) + "_END")
             new_user.send_string(usernames)                              # send users
 
             # update terminal info
             print("[CONNECTED] ", new_user.get_username())
             print("[USERS ONLINE]")
             for user in self.users:
+                user.send_string("USERJOIN_" + str(username) + "_END")
                 print(user.get_username())
 
             # start thread
