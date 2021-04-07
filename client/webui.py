@@ -10,8 +10,8 @@ def startUI():
     # communication.connect("Tim", "135.125.207.61", 4747)
 
     # where is the html located?
-    """eel.init('webui')
-    eel.start('server_view/server_view.html', block=False)
+    eel.init('webui')
+    eel.start('dashboard/index.html', block=False)
 
     ################ BEGIN UI ################
 
@@ -77,4 +77,4 @@ def startUI():
             #update_users()
         except:
             pass
-        eel.sleep(100)"""
+        eel.sleep(100)
