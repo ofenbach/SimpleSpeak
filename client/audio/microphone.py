@@ -16,7 +16,7 @@ class Microphone:
 
         # Starting microphone and microphone list
         self.display_mics()
-        self.recording_stream = self.pyaudio.open(format=self.AUDIO_FORMAT, channels=self.CHANNELS, rate=self.RATE, input=True, frames_per_buffer=self.CHUNK_SIZE)
+        self.recording_stream = self.pyaudio.open(format=self.AUDIO_FORMAT, channels=self.CHANNELS, rate=self.RATE, input=True, frames_per_buffer=self.CHUNK_SIZE,  input_device_index=1)
 
         # start recording thread
         threading.Thread(target=self.start_recording).start()
@@ -51,5 +51,5 @@ class Microphone:
         amount_microphones = devices_info.get('deviceCount')
         for i in range(0, amount_microphones):
             if self.pyaudio.get_device_info_by_host_api_device_index(0, i).get('maxInputChannels') > 0:
-                print("MIC ID: ", id, self.pyaudio.get_device_info_by_host_api_device_index(0, i).get('name'))
+                print("MIC ID: ", str(id), self.pyaudio.get_device_info_by_host_api_device_index(0, i).get('name'))
         print("################")

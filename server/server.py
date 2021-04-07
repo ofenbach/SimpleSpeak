@@ -17,9 +17,9 @@ class Server:
         self.SOCKET.bind(("0.0.0.0", 4747))
         self.SOCKET.listen()
 
-        print("[STARTED] Listening ...")
         while True:
             # waiting for connection ...
+            print("[STARTED] Listening ...")
 
             # connection received
             user_socket, user_ip = self.SOCKET.accept()
@@ -39,11 +39,12 @@ class Server:
             print("[CONNECTED] ", new_user.get_username())
             print("[USERS ONLINE]")
             for user in self.users:
-                user.send_string("USERJOIN_" + str(username) + "_END")
+                if user != new_user:
+                    user.send_string("USERJOIN_" + str(username) + "_END")
                 print(user.get_username())
 
             # start thread
-            threading.Thread(target=self.receive_data, args=(new_user,)).start()
+            threading.Thread(target=self.receive_data, args=(user,)).start()
 
 
     def receive_data(self, user):
@@ -84,7 +85,9 @@ class Server:
 
             except Exception as e:
                 print("[SENDING ERROR] " + str(e))
-
+                user.kick()
+                self.users.remove(user)
+                break
 
     def handle_message(self, sender, string_data):
         """ Handle messages received """

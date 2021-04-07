@@ -14,11 +14,11 @@ class User:
 
     def send_string(self, string_data: str):
         """ Convert stringdata to actual data """
-        self.SOCKET.send(str(string_data).encode('utf-8', 'ignore'))
+        self.SOCKET.sendall(str(string_data).encode('utf-8', 'ignore'))
 
     def send(self, data):
         """ Byte data """
-        self.SOCKET.send(data)
+        self.SOCKET.sendall(data)
 
     def kick(self):
         self.SOCKET.close()
