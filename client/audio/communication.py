@@ -24,7 +24,7 @@ class Communication:
                                     Example:    {"JoeRogan": "Room1"} """
         self.connected = False
         self.SOCKET = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.CHUNK_SIZE = 1024
+        self.CHUNK_SIZE = 8096
         self.usernames_rooms = {}
         self.pyaudio = pyaudio.PyAudio()
 
@@ -53,7 +53,7 @@ class Communication:
             return self.connected
 
         # starting devices (start their own threads)
-        self.AUDIO_FORMAT = pyaudio.paInt32  # alternative: pyInt32
+        self.AUDIO_FORMAT = pyaudio.paInt16  # alternative: pyInt32
         self.CHANNELS = 1
         self.RATE = 48000
         self.microphone = Microphone(self, self.pyaudio, self.CHUNK_SIZE, self.AUDIO_FORMAT, self.CHANNELS, self.RATE)

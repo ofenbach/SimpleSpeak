@@ -7,11 +7,11 @@ def startUI():
     """ NEW HTML BASED UI """
     communication = Communication()
     #threading.Thread(target=communication.connect, args=("TIM!", "135.125.207.61", 4747)).start()
-    communication.connect("REALTIM", "135.125.207.61", 4747)
+    #communication.connect("REALTIM", "135.125.207.61", 4747)
 
     # where is the html located?
-    """eel.init('webui')
-    eel.start('dashboard/index.html', block=False)
+    eel.init('')
+    eel.start('webui/index.html', block=False)
 
     ################ BEGIN UI ################
 
@@ -19,7 +19,7 @@ def startUI():
     @eel.expose                             # bridge between javascript and python
     def connect_button_pressed():
         if not communication.connected:
-            threading.Thread(target=communication.connect, args=("Tim!", "135.125.207.61", 4848)).start()
+            communication.connect("REALTIM", "135.125.207.61", 4747)
 
     @eel.expose
     def enter_room(room_name):
@@ -28,6 +28,9 @@ def startUI():
 
     @eel.expose
     def update_users():
+
+        if not communication.connected:
+            communication.connect("REALTIM", "135.125.207.61", 4747)
 
         # get users online
         users_online = communication.usernames_rooms
@@ -58,15 +61,15 @@ def startUI():
 
         # todo: call javascript function to dynamically display users
 
-    @eel.expose
+
+    """"@eel.expose
     def mute_button_pressed():
         communication.microphone.muted = not communication.microphone.muted
         print("MUTE BUTTON" + str(communication.microphone.muted))
-
     @eel.expose
     def deaf_button_pressed():
         communication.speaker.deaf = not communication.speaker.deaf
-        print("DEAF BUTTON" + str(communication.speaker.deaf))
+        print("DEAF BUTTON" + str(communication.speaker.deaf))"""
 
     ################  END UI  ################
 
@@ -74,7 +77,7 @@ def startUI():
     while True:
         try:
             pass
-            #update_users()
+            update_users()
         except:
             pass
-        eel.sleep(100)"""
+        eel.sleep(100)

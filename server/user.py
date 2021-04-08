@@ -6,10 +6,11 @@ import socket
 class User:
     """ Creates new user object which stores some information about the connected client """
 
-    def __init__(self, SOCKET, IP, USERNAME):
+    def __init__(self, SOCKET, IP, USERNAME, CHUNK_SIZE):
         self.SOCKET = SOCKET
         self.IP = IP
         self.USERNAME = USERNAME
+        self.CHUNK_SIZE = CHUNK_SIZE
         self.room = "connectROOM"
 
     def send_string(self, string_data: str):
@@ -19,6 +20,9 @@ class User:
     def send(self, data):
         """ Byte data """
         self.SOCKET.sendall(data)
+
+    def receive(self):
+        return self.SOCKET.recv(self.CHUNK_SIZE)
 
     def kick(self):
         self.SOCKET.close()

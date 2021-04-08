@@ -13,7 +13,7 @@ class Speaker:
         # audio settings TODO: channels = 2? Caused some bugs
         self.deaf = False
         self.AUDIO_FORMAT = AUDIO_FORMAT
-        self.CHANNELS = CHANNELS
+        self.CHANNELS = 2
         self.RATE = RATE
 
         # starting speaker and speaker list

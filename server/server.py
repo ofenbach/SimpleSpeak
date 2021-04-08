@@ -11,7 +11,7 @@ class Server:
     def __init__(self):
         """ Set default server values and wait for connections """
         self.users = []
-        self.CHUNK_SIZE = 1024
+        self.CHUNK_SIZE = 2048
         self.SOCKET = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.SOCKET.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         self.SOCKET.bind(("0.0.0.0", 4747))
@@ -23,28 +23,32 @@ class Server:
 
             # connection received
             user_socket, user_ip = self.SOCKET.accept()
-            username = user_socket.recv(self.CHUNK_SIZE).decode('utf-8','ignore')   # receive username
+            username = user_socket.recv(self.CHUNK_SIZE).decode('utf-8','ignore')
+            new_user = User(user_socket, user_ip, username, self.CHUNK_SIZE)
 
-            # update own userbase
-            new_user = User(user_socket,user_ip, username)
-            self.users.append(new_user)
+            # start communication
+            if not "bot" in username:
+                self.users.append(new_user)
+                usernames = {}
+                for user in self.users:                 # send user connected users and new user to connected users
+                    usernames[user.get_username()] = user.get_room()
+                new_user.send_string(usernames)         # send users
 
-            # send user connected users and new user to connected users
-            usernames = {}
-            for user in self.users:
-                usernames[user.get_username()] = user.get_room()
-            new_user.send_string(usernames)                              # send users
+                # update terminal info
+                print("[CONNECTED] ", new_user.get_username())
+                print("[USERS ONLINE]")
+                for user in self.users:
+                    if user != new_user:
+                        user.send_string("USERJOIN_" + str(username) + "_END")
+                    print(user.get_username())
 
-            # update terminal info
-            print("[CONNECTED] ", new_user.get_username())
-            print("[USERS ONLINE]")
-            for user in self.users:
-                if user != new_user:
-                    user.send_string("USERJOIN_" + str(username) + "_END")
-                print(user.get_username())
+                # start thread
+                threading.Thread(target=self.receive_data, args=(new_user,)).start()
 
-            # start thread
-            threading.Thread(target=self.receive_data, args=(user,)).start()
+            else:
+                print("[CONNECTION] BOT CONNECTED")
+                if "musicbot" in username:              # which kind of bot?
+                    threading.Thread(target=self.receive_music, args=(new_user,)).start()
 
 
     def receive_data(self, user):
@@ -53,22 +57,29 @@ class Server:
 
         while True:
             try:
-                data = user.get_socket().recv(self.CHUNK_SIZE)
+                data = user.receive()
+                string_data = data.decode('utf-8', 'ignore')
 
-                try:
-                    string_data = data.decode('utf-8', 'ignore')
-
-                    if "DISCONNECT" in string_data or "ROOMSWITCH" in string_data:
-                        self.handle_message(user, string_data)
-                    else:
-                        self.handle_audio(user, data)
-                except Exception as e:
-                    print("[STRINDATA] ", e)
-                    raise Exception(str(e))
+                if "DISCONNECT" in string_data or "ROOMSWITCH" in string_data or "USERJOIN" in string_data:
+                    self.handle_message(user, string_data)
+                else:
+                    self.handle_audio(user, data)
 
             except Exception as e:
-                print("RECV ERROR: ", e)
+                print("RECEIVE ERROR: ", e)
                 self.disconnect_user(user)
+                break
+
+    def receive_music(self, user):
+        """ Receives data of user in parameter.
+            Gets started as a thread """
+        print("Started playing music")
+        while True:
+            try:
+                data = user.get_socket().recv(self.CHUNK_SIZE)
+                self.handle_audio(user, data)
+            except Exception as e:
+                print("[MUSICBOT ERROR RECEIVING] ", e)
                 break
 
     def handle_audio(self, sender, data):
