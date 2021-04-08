@@ -24,7 +24,7 @@ class Communication:
                                     Example:    {"JoeRogan": "Room1"} """
         self.connected = False
         self.SOCKET = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.CHUNK_SIZE = 8096
+        self.CHUNK_SIZE = 2048
         self.usernames_rooms = {}
         self.pyaudio = pyaudio.PyAudio()
 
