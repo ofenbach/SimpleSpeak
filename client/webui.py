@@ -7,10 +7,10 @@ def startUI():
     """ NEW HTML BASED UI """
     communication = Communication()
     #threading.Thread(target=communication.connect, args=("TIM!", "135.125.207.61", 4747)).start()
-    #communication.connect("REALTIM", "135.125.207.61", 4747)
+    communication.connect("REALTIM", "135.125.207.61", 4747)
 
     # where is the html located?
-    eel.init('')
+    """eel.init('')
     eel.start('webui/index.html', block=False)
 
     ################ BEGIN UI ################
@@ -62,7 +62,7 @@ def startUI():
         # todo: call javascript function to dynamically display users
 
 
-    """"@eel.expose
+    "@eel.expose
     def mute_button_pressed():
         communication.microphone.muted = not communication.microphone.muted
         print("MUTE BUTTON" + str(communication.microphone.muted))
@@ -74,10 +74,10 @@ def startUI():
     ################  END UI  ################
 
     # keep refreshing UI
-    while True:
+    """while True:
         try:
             pass
             update_users()
         except:
             pass
-        eel.sleep(100)
+        eel.sleep(100)"""
