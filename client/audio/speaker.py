@@ -22,8 +22,8 @@ class Speaker:
                                                 output=True, frames_per_buffer=self.CHUNK_SIZE)
 
         # start playing thread
-        #threading.Thread(target=self.start_playing).start()
-        self.start_playing()
+        threading.Thread(target=self.start_playing).start()
+        #self.start_playing()
 
 
     def start_playing(self):

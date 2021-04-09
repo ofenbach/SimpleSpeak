@@ -4,17 +4,9 @@
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\__init__.py',
    'PYMODULE'),
-  ('packaging.tags',
+  ('packaging.requirements',
    'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\tags.py',
-   'PYMODULE'),
-  ('ctypes',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\ctypes\\__init__.py',
-   'PYMODULE'),
-  ('ctypes._endian',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\ctypes\\_endian.py',
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\requirements.py',
    'PYMODULE'),
   ('typing',
    'c:\\users\\tim '
@@ -24,9 +16,25 @@
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\contextlib.py',
    'PYMODULE'),
-  ('struct',
+  ('urllib.parse',
    'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\struct.py',
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\urllib\\parse.py',
+   'PYMODULE'),
+  ('urllib',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\urllib\\__init__.py',
+   'PYMODULE'),
+  ('pyparsing',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pyparsing.py',
+   'PYMODULE'),
+  ('uuid',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\uuid.py',
+   'PYMODULE'),
+  ('hashlib',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\hashlib.py',
    'PYMODULE'),
   ('logging',
    'c:\\users\\tim '
@@ -36,10 +44,6 @@
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\pickle.py',
    'PYMODULE'),
-  ('pprint',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\pprint.py',
-   'PYMODULE'),
   ('doctest',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\doctest.py',
@@ -47,38 +51,6 @@
   ('argparse',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\argparse.py',
-   'PYMODULE'),
-  ('shutil',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\shutil.py',
-   'PYMODULE'),
-  ('tarfile',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\tarfile.py',
-   'PYMODULE'),
-  ('gzip',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\gzip.py',
-   'PYMODULE'),
-  ('_compression',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\_compression.py',
-   'PYMODULE'),
-  ('lzma',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\lzma.py',
-   'PYMODULE'),
-  ('bz2',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\bz2.py',
-   'PYMODULE'),
-  ('fnmatch',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\fnmatch.py',
-   'PYMODULE'),
-  ('copy',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\copy.py',
    'PYMODULE'),
   ('gettext',
    'c:\\users\\tim '
@@ -103,14 +75,6 @@
   ('asyncio.log',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\asyncio\\log.py',
-   'PYMODULE'),
-  ('subprocess',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\subprocess.py',
-   'PYMODULE'),
-  ('socket',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\socket.py',
    'PYMODULE'),
   ('signal',
    'c:\\users\\tim '
@@ -139,14 +103,6 @@
   ('calendar',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\calendar.py',
-   'PYMODULE'),
-  ('datetime',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\datetime.py',
-   'PYMODULE'),
-  ('_strptime',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\_strptime.py',
    'PYMODULE'),
   ('base64',
    'c:\\users\\tim '
@@ -260,13 +216,9 @@
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\pathlib.py',
    'PYMODULE'),
-  ('urllib.parse',
+  ('fnmatch',
    'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\urllib\\parse.py',
-   'PYMODULE'),
-  ('urllib',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\urllib\\__init__.py',
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\fnmatch.py',
    'PYMODULE'),
   ('email',
    'c:\\users\\tim '
@@ -283,34 +235,6 @@
   ('email._parseaddr',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\email\\_parseaddr.py',
-   'PYMODULE'),
-  ('random',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\random.py',
-   'PYMODULE'),
-  ('statistics',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\statistics.py',
-   'PYMODULE'),
-  ('decimal',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\decimal.py',
-   'PYMODULE'),
-  ('_pydecimal',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\_pydecimal.py',
-   'PYMODULE'),
-  ('fractions',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\fractions.py',
-   'PYMODULE'),
-  ('numbers',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\numbers.py',
-   'PYMODULE'),
-  ('hashlib',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\hashlib.py',
    'PYMODULE'),
   ('email._encoded_words',
    'c:\\users\\tim '
@@ -404,6 +328,14 @@
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\multiprocessing\\sharedctypes.py',
    'PYMODULE'),
+  ('ctypes',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\ctypes\\__init__.py',
+   'PYMODULE'),
+  ('ctypes._endian',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\ctypes\\_endian.py',
+   'PYMODULE'),
   ('multiprocessing.pool',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\multiprocessing\\pool.py',
@@ -451,6 +383,14 @@
   ('xmlrpc',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\xmlrpc\\__init__.py',
+   'PYMODULE'),
+  ('gzip',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\gzip.py',
+   'PYMODULE'),
+  ('_compression',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\_compression.py',
    'PYMODULE'),
   ('xml.parsers.expat',
    'c:\\users\\tim '
@@ -572,6 +512,18 @@
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\optparse.py',
    'PYMODULE'),
+  ('decimal',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\decimal.py',
+   'PYMODULE'),
+  ('_pydecimal',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\_pydecimal.py',
+   'PYMODULE'),
+  ('numbers',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\numbers.py',
+   'PYMODULE'),
   ('multiprocessing',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\multiprocessing\\__init__.py',
@@ -680,6 +632,54 @@
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\unittest\\util.py',
    'PYMODULE'),
+  ('difflib',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\difflib.py',
+   'PYMODULE'),
+  ('_compat_pickle',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\_compat_pickle.py',
+   'PYMODULE'),
+  ('struct',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\struct.py',
+   'PYMODULE'),
+  ('random',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\random.py',
+   'PYMODULE'),
+  ('statistics',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\statistics.py',
+   'PYMODULE'),
+  ('fractions',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\fractions.py',
+   'PYMODULE'),
+  ('socket',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\socket.py',
+   'PYMODULE'),
+  ('subprocess',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\subprocess.py',
+   'PYMODULE'),
+  ('shutil',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\shutil.py',
+   'PYMODULE'),
+  ('tarfile',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\tarfile.py',
+   'PYMODULE'),
+  ('lzma',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\lzma.py',
+   'PYMODULE'),
+  ('bz2',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\bz2.py',
+   'PYMODULE'),
   ('pdb',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\pdb.py',
@@ -748,14 +748,6 @@
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\cmd.py',
    'PYMODULE'),
-  ('difflib',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\difflib.py',
-   'PYMODULE'),
-  ('_compat_pickle',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\_compat_pickle.py',
-   'PYMODULE'),
   ('threading',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\threading.py',
@@ -764,9 +756,45 @@
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\_threading_local.py',
    'PYMODULE'),
+  ('datetime',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\datetime.py',
+   'PYMODULE'),
+  ('_strptime',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\_strptime.py',
+   'PYMODULE'),
+  ('pprint',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\pprint.py',
+   'PYMODULE'),
+  ('copy',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\copy.py',
+   'PYMODULE'),
   ('string',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\string.py',
+   'PYMODULE'),
+  ('packaging.markers',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\markers.py',
+   'PYMODULE'),
+  ('packaging._compat',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\_compat.py',
+   'PYMODULE'),
+  ('packaging._typing',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\_typing.py',
+   'PYMODULE'),
+  ('packaging.version',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\version.py',
+   'PYMODULE'),
+  ('packaging.tags',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\tags.py',
    'PYMODULE'),
   ('distutils.util',
    'c:\\users\\tim '
@@ -844,109 +872,81 @@
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\distutils\\errors.py',
    'PYMODULE'),
-  ('packaging.utils',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\utils.py',
-   'PYMODULE'),
-  ('packaging._compat',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\_compat.py',
-   'PYMODULE'),
-  ('packaging.__about__',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\__about__.py',
-   'PYMODULE'),
-  ('packaging._typing',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\_typing.py',
-   'PYMODULE'),
-  ('packaging.markers',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\markers.py',
-   'PYMODULE'),
-  ('pyparsing',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pyparsing.py',
-   'PYMODULE'),
-  ('uuid',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\uuid.py',
-   'PYMODULE'),
-  ('packaging.version',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\version.py',
-   'PYMODULE'),
-  ('packaging.requirements',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\requirements.py',
-   'PYMODULE'),
   ('packaging.specifiers',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\specifiers.py',
-   'PYMODULE'),
-  ('packaging',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\__init__.py',
    'PYMODULE'),
   ('packaging._structures',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\_structures.py',
    'PYMODULE'),
+  ('packaging',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\__init__.py',
+   'PYMODULE'),
+  ('packaging.utils',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\utils.py',
+   'PYMODULE'),
+  ('packaging.__about__',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\packaging\\__about__.py',
+   'PYMODULE'),
   ('pkg_resources._vendor.packaging.__about__',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__about__.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__init__.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging.tags',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\tags.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.pyparsing',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\pyparsing.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging._compat',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_compat.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging.version',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\version.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging.specifiers',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\specifiers.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\__init__.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging.markers',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\markers.py',
    'PYMODULE'),
   ('pkg_resources._vendor.packaging.utils',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\utils.py',
    'PYMODULE'),
+  ('pkg_resources._vendor.packaging.tags',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\tags.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.six',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\six.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\__init__.py',
+   'PYMODULE'),
   ('pkg_resources._vendor.packaging.requirements',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\requirements.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.specifiers',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\specifiers.py',
    'PYMODULE'),
   ('pkg_resources._vendor.appdirs',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\appdirs.py',
    'PYMODULE'),
+  ('pkg_resources._vendor.packaging.markers',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\markers.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.version',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\version.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.pyparsing',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\pyparsing.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging._compat',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_compat.py',
+   'PYMODULE'),
   ('pkg_resources._vendor.packaging._structures',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_structures.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.six',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\six.py',
    'PYMODULE'),
   ('sysconfig',
    'c:\\users\\tim '
@@ -1032,17 +1032,17 @@
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\__future__.py',
    'PYMODULE'),
-  ('stringprep',
+  ('_py_abc',
    'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\stringprep.py',
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\_py_abc.py',
    'PYMODULE'),
   ('tracemalloc',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\tracemalloc.py',
    'PYMODULE'),
-  ('_py_abc',
+  ('stringprep',
    'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\_py_abc.py',
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\stringprep.py',
    'PYMODULE'),
   ('webui',
    'C:\\Users\\Tim Ofenbach\\Documents\\GitHub\\SimpleSpeak\\client\\webui.py',
@@ -1421,57 +1421,53 @@
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\__init__.py',
    'PYMODULE'),
-  ('setuptools._vendor.packaging.utils',
+  ('setuptools._vendor.packaging.specifiers',
    'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\utils.py',
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\specifiers.py',
    'PYMODULE'),
   ('setuptools._vendor.packaging._structures',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\_structures.py',
    'PYMODULE'),
-  ('setuptools._vendor.packaging.markers',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\markers.py',
-   'PYMODULE'),
-  ('setuptools._vendor.packaging._compat',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\_compat.py',
-   'PYMODULE'),
-  ('setuptools._vendor.pyparsing',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\pyparsing.py',
-   'PYMODULE'),
-  ('setuptools._vendor.packaging.tags',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\tags.py',
-   'PYMODULE'),
   ('setuptools._vendor.packaging',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\__init__.py',
-   'PYMODULE'),
-  ('setuptools._vendor.six',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\six.py',
-   'PYMODULE'),
-  ('setuptools._vendor.packaging.specifiers',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\specifiers.py',
    'PYMODULE'),
   ('setuptools._vendor.packaging.__about__',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\__about__.py',
    'PYMODULE'),
+  ('setuptools._vendor.six',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\six.py',
+   'PYMODULE'),
   ('setuptools._vendor',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\__init__.py',
    'PYMODULE'),
-  ('setuptools._vendor.ordered_set',
+  ('setuptools._vendor.pyparsing',
    'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\ordered_set.py',
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\pyparsing.py',
    'PYMODULE'),
   ('setuptools._vendor.packaging.version',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\version.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.utils',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\utils.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.markers',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\markers.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.tags',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\tags.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging._compat',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\_compat.py',
    'PYMODULE'),
   ('setuptools._vendor.packaging.requirements',
    'c:\\users\\tim '
@@ -1488,6 +1484,10 @@
   ('setuptools.extern',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\extern\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.ordered_set',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\ordered_set.py',
    'PYMODULE'),
   ('setuptools.msvc',
    'c:\\users\\tim '
@@ -1793,33 +1793,53 @@
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\cffi\\model.py',
    'PYMODULE'),
-  ('gevent._threading',
+  ('gevent._ffi.loop',
    'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_threading.py',
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_ffi\\loop.py',
    'PYMODULE'),
-  ('gevent.time',
+  ('gevent.resolver.ares',
    'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\time.py',
-   'PYMODULE'),
-  ('gevent.resolver',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\resolver\\__init__.py',
-   'PYMODULE'),
-  ('gevent.resolver.thread',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\resolver\\thread.py',
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\resolver\\ares.py',
    'PYMODULE'),
   ('gevent.libuv.watcher',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\libuv\\watcher.py',
    'PYMODULE'),
-  ('gevent._patcher',
+  ('gevent._ffi.watcher',
    'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_patcher.py',
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_ffi\\watcher.py',
    'PYMODULE'),
-  ('gevent._interfaces',
+  ('gevent._threading',
    'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_interfaces.py',
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_threading.py',
+   'PYMODULE'),
+  ('gevent.resolver.thread',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\resolver\\thread.py',
+   'PYMODULE'),
+  ('gevent._ffi.callback',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_ffi\\callback.py',
+   'PYMODULE'),
+  ('gevent.resolver.blocking',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\resolver\\blocking.py',
+   'PYMODULE'),
+  ('gevent.resolver.dnspython',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\resolver\\dnspython.py',
+   'PYMODULE'),
+  ('gevent._abstract_linkable',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_abstract_linkable.py',
+   'PYMODULE'),
+  ('gevent.libuv.loop',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\libuv\\loop.py',
+   'PYMODULE'),
+  ('gevent.signal',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\signal.py',
    'PYMODULE'),
   ('gevent.libev._corecffi_build',
    'c:\\users\\tim '
@@ -1829,85 +1849,65 @@
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\libuv\\__init__.py',
    'PYMODULE'),
-  ('gevent.libuv._corecffi_build',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\libuv\\_corecffi_build.py',
-   'PYMODULE'),
-  ('gevent._ffi',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_ffi\\__init__.py',
-   'PYMODULE'),
-  ('gevent.builtins',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\builtins.py',
-   'PYMODULE'),
-  ('gevent.ares',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\ares.py',
-   'PYMODULE'),
   ('gevent.libev',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\libev\\__init__.py',
-   'PYMODULE'),
-  ('gevent._ffi.loop',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_ffi\\loop.py',
-   'PYMODULE'),
-  ('gevent._ffi.callback',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_ffi\\callback.py',
-   'PYMODULE'),
-  ('gevent.selectors',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\selectors.py',
-   'PYMODULE'),
-  ('gevent._ffi.watcher',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_ffi\\watcher.py',
-   'PYMODULE'),
-  ('gevent.backdoor',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\backdoor.py',
    'PYMODULE'),
   ('gevent.resolver._addresses',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\resolver\\_addresses.py',
    'PYMODULE'),
-  ('gevent.resolver.ares',
+  ('gevent._ffi',
    'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\resolver\\ares.py',
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_ffi\\__init__.py',
+   'PYMODULE'),
+  ('gevent._interfaces',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_interfaces.py',
+   'PYMODULE'),
+  ('gevent.selectors',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\selectors.py',
+   'PYMODULE'),
+  ('gevent.libev.watcher',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\libev\\watcher.py',
+   'PYMODULE'),
+  ('gevent._patcher',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_patcher.py',
+   'PYMODULE'),
+  ('gevent.builtins',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\builtins.py',
+   'PYMODULE'),
+  ('gevent.backdoor',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\backdoor.py',
+   'PYMODULE'),
+  ('gevent.ares',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\ares.py',
+   'PYMODULE'),
+  ('gevent.libuv._corecffi_build',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\libuv\\_corecffi_build.py',
+   'PYMODULE'),
+  ('gevent.time',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\time.py',
    'PYMODULE'),
   ('gevent.libev.corecffi',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\libev\\corecffi.py',
    'PYMODULE'),
-  ('gevent.resolver.dnspython',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\resolver\\dnspython.py',
-   'PYMODULE'),
-  ('gevent.resolver.blocking',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\resolver\\blocking.py',
-   'PYMODULE'),
-  ('gevent.libuv.loop',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\libuv\\loop.py',
-   'PYMODULE'),
   ('gevent.resolver._hostsfile',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\resolver\\_hostsfile.py',
    'PYMODULE'),
-  ('gevent._abstract_linkable',
+  ('gevent.resolver',
    'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_abstract_linkable.py',
-   'PYMODULE'),
-  ('gevent.signal',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\signal.py',
-   'PYMODULE'),
-  ('gevent.libev.watcher',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\libev\\watcher.py',
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\resolver\\__init__.py',
    'PYMODULE'),
   ('gevent.subprocess',
    'c:\\users\\tim '

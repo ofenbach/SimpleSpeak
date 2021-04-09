@@ -54,25 +54,13 @@
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\VCRUNTIME140.dll',
    'BINARY'),
-  ('_ctypes',
+  ('unicodedata',
    'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\DLLs\\_ctypes.pyd',
-   'EXTENSION'),
-  ('_lzma',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\DLLs\\_lzma.pyd',
-   'EXTENSION'),
-  ('_bz2',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\DLLs\\_bz2.pyd',
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\DLLs\\unicodedata.pyd',
    'EXTENSION'),
   ('select',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\DLLs\\select.pyd',
-   'EXTENSION'),
-  ('_socket',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\DLLs\\_socket.pyd',
    'EXTENSION'),
   ('_overlapped',
    'c:\\users\\tim '
@@ -90,17 +78,9 @@
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\DLLs\\_queue.pyd',
    'EXTENSION'),
-  ('unicodedata',
+  ('_ctypes',
    'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\DLLs\\unicodedata.pyd',
-   'EXTENSION'),
-  ('_decimal',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\DLLs\\_decimal.pyd',
-   'EXTENSION'),
-  ('_hashlib',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\DLLs\\_hashlib.pyd',
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\DLLs\\_ctypes.pyd',
    'EXTENSION'),
   ('_multiprocessing',
    'c:\\users\\tim '
@@ -110,9 +90,29 @@
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\DLLs\\pyexpat.pyd',
    'EXTENSION'),
+  ('_decimal',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\DLLs\\_decimal.pyd',
+   'EXTENSION'),
+  ('_hashlib',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\DLLs\\_hashlib.pyd',
+   'EXTENSION'),
   ('_uuid',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\DLLs\\_uuid.pyd',
+   'EXTENSION'),
+  ('_socket',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\DLLs\\_socket.pyd',
+   'EXTENSION'),
+  ('_lzma',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\DLLs\\_lzma.pyd',
+   'EXTENSION'),
+  ('_bz2',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\DLLs\\_bz2.pyd',
    'EXTENSION'),
   ('_portaudio',
    'c:\\users\\tim '
@@ -130,70 +130,66 @@
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\_cffi_backend.cp39-win_amd64.pyd',
    'EXTENSION'),
-  ('gevent._gevent_c_greenlet_primitives',
+  ('gevent._gevent_cgreenlet',
    'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_gevent_c_greenlet_primitives.cp39-win_amd64.pyd',
-   'EXTENSION'),
-  ('gevent._gevent_c_abstract_linkable',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_gevent_c_abstract_linkable.cp39-win_amd64.pyd',
-   'EXTENSION'),
-  ('gevent._gevent_c_ident',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_gevent_c_ident.cp39-win_amd64.pyd',
-   'EXTENSION'),
-  ('gevent._gevent_c_tracer',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_gevent_c_tracer.cp39-win_amd64.pyd',
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_gevent_cgreenlet.cp39-win_amd64.pyd',
    'EXTENSION'),
   ('gevent._gevent_c_semaphore',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_gevent_c_semaphore.cp39-win_amd64.pyd',
    'EXTENSION'),
-  ('gevent._gevent_c_waiter',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_gevent_c_waiter.cp39-win_amd64.pyd',
-   'EXTENSION'),
-  ('gevent._gevent_c_hub_local',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_gevent_c_hub_local.cp39-win_amd64.pyd',
-   'EXTENSION'),
   ('gevent._gevent_cqueue',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_gevent_cqueue.cp39-win_amd64.pyd',
-   'EXTENSION'),
-  ('gevent._gevent_cevent',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_gevent_cevent.cp39-win_amd64.pyd',
-   'EXTENSION'),
-  ('gevent.libuv._corecffi',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\libuv\\_corecffi.pyd',
-   'EXTENSION'),
-  ('gevent.libev.corecext',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\libev\\corecext.cp39-win_amd64.pyd',
-   'EXTENSION'),
-  ('gevent._gevent_c_imap',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_gevent_c_imap.cp39-win_amd64.pyd',
    'EXTENSION'),
   ('gevent._gevent_clocal',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_gevent_clocal.cp39-win_amd64.pyd',
    'EXTENSION'),
-  ('gevent._gevent_cgreenlet',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_gevent_cgreenlet.cp39-win_amd64.pyd',
-   'EXTENSION'),
   ('gevent._gevent_c_hub_primitives',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_gevent_c_hub_primitives.cp39-win_amd64.pyd',
    'EXTENSION'),
-  ('libffi-7.dll',
+  ('gevent.libuv._corecffi',
    'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\DLLs\\libffi-7.dll',
-   'BINARY'),
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\libuv\\_corecffi.pyd',
+   'EXTENSION'),
+  ('gevent._gevent_c_imap',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_gevent_c_imap.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('gevent.libev.corecext',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\libev\\corecext.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('gevent._gevent_c_ident',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_gevent_c_ident.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('gevent._gevent_c_greenlet_primitives',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_gevent_c_greenlet_primitives.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('gevent._gevent_cevent',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_gevent_cevent.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('gevent._gevent_c_abstract_linkable',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_gevent_c_abstract_linkable.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('gevent._gevent_c_hub_local',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_gevent_c_hub_local.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('gevent._gevent_c_tracer',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_gevent_c_tracer.cp39-win_amd64.pyd',
+   'EXTENSION'),
+  ('gevent._gevent_c_waiter',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent\\_gevent_c_waiter.cp39-win_amd64.pyd',
+   'EXTENSION'),
   ('libcrypto-1_1.dll',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\DLLs\\libcrypto-1_1.dll',
@@ -201,6 +197,10 @@
   ('libssl-1_1.dll',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\DLLs\\libssl-1_1.dll',
+   'BINARY'),
+  ('libffi-7.dll',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\DLLs\\libffi-7.dll',
    'BINARY'),
   ('python3.dll',
    'c:\\users\\tim '
@@ -210,29 +210,17 @@
    'C:\\Users\\Tim '
    'Ofenbach\\Documents\\GitHub\\SimpleSpeak\\client\\build\\main\\base_library.zip',
    'DATA'),
-  ('gevent-21.1.2-py3.9.egg-info\\AUTHORS',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent-21.1.2.dist-info\\AUTHORS',
-   'DATA'),
   ('gevent-21.1.2-py3.9.egg-info\\METADATA',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent-21.1.2.dist-info\\METADATA',
    'DATA'),
-  ('gevent-21.1.2-py3.9.egg-info\\LICENSE',
+  ('gevent-21.1.2-py3.9.egg-info\\INSTALLER',
    'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent-21.1.2.dist-info\\LICENSE',
-   'DATA'),
-  ('Include\\pyconfig.h',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\Include\\pyconfig.h',
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent-21.1.2.dist-info\\INSTALLER',
    'DATA'),
   ('gevent-21.1.2-py3.9.egg-info\\entry_points.txt',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent-21.1.2.dist-info\\entry_points.txt',
-   'DATA'),
-  ('gevent-21.1.2-py3.9.egg-info\\RECORD',
-   'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent-21.1.2.dist-info\\RECORD',
    'DATA'),
   ('eel\\eel.js',
    'c:\\users\\tim '
@@ -242,17 +230,29 @@
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent-21.1.2.dist-info\\NOTICE',
    'DATA'),
+  ('gevent-21.1.2-py3.9.egg-info\\top_level.txt',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent-21.1.2.dist-info\\top_level.txt',
+   'DATA'),
   ('gevent-21.1.2-py3.9.egg-info\\WHEEL',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent-21.1.2.dist-info\\WHEEL',
    'DATA'),
-  ('gevent-21.1.2-py3.9.egg-info\\INSTALLER',
+  ('gevent-21.1.2-py3.9.egg-info\\RECORD',
    'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent-21.1.2.dist-info\\INSTALLER',
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent-21.1.2.dist-info\\RECORD',
    'DATA'),
-  ('gevent-21.1.2-py3.9.egg-info\\top_level.txt',
+  ('Include\\pyconfig.h',
    'c:\\users\\tim '
-   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent-21.1.2.dist-info\\top_level.txt',
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\Include\\pyconfig.h',
+   'DATA'),
+  ('gevent-21.1.2-py3.9.egg-info\\AUTHORS',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent-21.1.2.dist-info\\AUTHORS',
+   'DATA'),
+  ('gevent-21.1.2-py3.9.egg-info\\LICENSE',
+   'c:\\users\\tim '
+   'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\gevent-21.1.2.dist-info\\LICENSE',
    'DATA'),
   ('main.exe.manifest',
    'C:\\Users\\Tim '
@@ -262,7 +262,7 @@
  [],
  False,
  False,
- 1617911134,
+ 1617990467,
  [('run.exe',
    'c:\\users\\tim '
    'ofenbach\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit\\run.exe',

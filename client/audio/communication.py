@@ -57,7 +57,11 @@ class Communication:
         self.CHANNELS = 1
         self.RATE = 20000
         self.microphone = Microphone(self, self.pyaudio, self.CHUNK_SIZE, self.AUDIO_FORMAT, self.CHANNELS, self.RATE)
-        self.speaker = Speaker(self, self.pyaudio, self.CHUNK_SIZE, self.AUDIO_FORMAT, self.CHANNELS, self.RATE)
+
+        for user_thread in range(0, len(self.usernames_rooms)):
+            print()
+            print("THREAD CREATED FOR USER")
+            self.speaker = Speaker(self, self.pyaudio, self.CHUNK_SIZE, self.AUDIO_FORMAT, self.CHANNELS, self.RATE)
 
 
     def disconnect(self):
@@ -109,4 +113,9 @@ class Communication:
         if "ROOMSWITCH" in string_data:
             print("Roomswtich")
         if "USERJOIN" in string_data:
-            print("Userjoin")
+            beginning = string_data.find("USERJOIN")
+            end = string_data.find("_END")
+            print("USER JOINED!" + string_data[beginning:end])
+            self.usernames_rooms[str(len(self.usernames_rooms))] = "connectROOM"
+            if len(self.usernames_rooms) > 2:
+                Speaker(self, self.pyaudio, self.CHUNK_SIZE, self.AUDIO_FORMAT, self.CHANNELS, self.RATE)

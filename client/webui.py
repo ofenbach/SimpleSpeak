@@ -19,7 +19,7 @@ def startUI():
     @eel.expose                             # bridge between javascript and python
     def connect_button_pressed():
         if not communication.connected:
-            communication.connect("REALTIM", "135.125.207.61", 4747)
+            pass#communication.connect("REALTIM", "135.125.207.61", 4747)
 
     @eel.expose
     def enter_room(room_name):
@@ -29,8 +29,8 @@ def startUI():
     @eel.expose
     def update_users():
 
-        if not communication.connected:
-            communication.connect("REALTIM", "135.125.207.61", 4747)
+        #if not communication.connected:
+        #    communication.connect("REALTIM", "135.125.207.61", 4747)
 
         # get users online
         users_online = communication.usernames_rooms

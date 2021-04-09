@@ -11,7 +11,7 @@ class Server:
     def __init__(self):
         """ Set default server values and wait for connections """
         self.users = []
-        self.CHUNK_SIZE = 4096
+        self.CHUNK_SIZE = 1024
         self.SOCKET = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.SOCKET.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         self.SOCKET.bind(("0.0.0.0", 4747))
