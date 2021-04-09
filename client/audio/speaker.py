@@ -9,6 +9,7 @@ class Speaker:
         self.COMMUNICATION = COMMUNICATION
         self.pyaudio = PYAUDIO
         self.CHUNK_SIZE = CHUNK_SIZE
+        self.CHUNK_SIZE = 4096
 
         # audio settings TODO: channels = 2? Caused some bugs
         self.deaf = False
@@ -21,7 +22,8 @@ class Speaker:
                                                 output=True, frames_per_buffer=self.CHUNK_SIZE)
 
         # start playing thread
-        threading.Thread(target=self.start_playing).start()
+        #threading.Thread(target=self.start_playing).start()
+        self.start_playing()
 
 
     def start_playing(self):

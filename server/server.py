@@ -11,7 +11,7 @@ class Server:
     def __init__(self):
         """ Set default server values and wait for connections """
         self.users = []
-        self.CHUNK_SIZE = 2048
+        self.CHUNK_SIZE = 4096
         self.SOCKET = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.SOCKET.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         self.SOCKET.bind(("0.0.0.0", 4747))
@@ -96,8 +96,7 @@ class Server:
 
             except Exception as e:
                 print("[SENDING ERROR] " + str(e))
-                user.kick()
-                self.users.remove(user)
+                self.disconnect_user(user)
                 break
 
     def handle_message(self, sender, string_data):
@@ -105,8 +104,7 @@ class Server:
 
         if "DISCONNECT" in string_data:
             print("[MESSAGE] DISCONNECT")
-            sender.kick()
-            self.users.remove(sender)
+            self.disconnect_user(sender)
             for user in self.users:
                 user.send_string("DISCONNECT_" + str(sender.get_username()) + "_END")
         if "ROOMSWITCH" in string_data:

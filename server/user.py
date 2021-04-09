@@ -19,7 +19,7 @@ class User:
 
     def send(self, data):
         """ Byte data """
-        self.SOCKET.sendall(data)
+        self.SOCKET.send(data)
 
     def receive(self):
         return self.SOCKET.recv(self.CHUNK_SIZE)
