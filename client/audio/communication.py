@@ -1,5 +1,6 @@
 import socket
-import threading
+import ast
+import pyaudio
 
 from audio.microphone import Microphone
 from audio.speaker import Speaker
@@ -23,8 +24,9 @@ class Communication:
                                     Example:    {"JoeRogan": "Room1"} """
         self.connected = False
         self.SOCKET = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.CHUNK_SIZE = 2048
-        self.usernames = {}
+        self.CHUNK_SIZE = 512
+        self.usernames_rooms = {}
+        self.pyaudio = pyaudio.PyAudio()
 
 
     def connect(self, USERNAME: str, IP: str, PORT: int):
@@ -38,23 +40,28 @@ class Communication:
         # connecting ...
         try:
             self.SOCKET.connect(self.SERVER)
-            self.SOCKET.send(self.USERNAME.encode())
-            self.usernames = self.SOCKET.recv(self.CHUNK_SIZE).decode()
+            self.SOCKET.send(self.USERNAME.encode())                            # send username
+            self.usernames_rooms = self.SOCKET.recv(self.CHUNK_SIZE).decode('utf-8', 'ignore')   # receives usernames
+            print(self.usernames_rooms)
+            self.usernames_rooms = ast.literal_eval(self.usernames_rooms)       # convert string representation of dict to dict
             self.connected = True
             print("[CONNECTED] " + str(self.SERVER))
-            print("[USERS] ", self.usernames)
+            print("[USERS/ROOMS] ", self.usernames_rooms)
         except Exception as e:
             self.connected = False
             print("[CONNECTION ERROR] " + str(e))
             return self.connected
 
-        # starting devices
-        microphone = Microphone(self, self.CHUNK_SIZE)
-        speaker = Speaker(self, self.CHUNK_SIZE)
+        # starting devices (start their own threads)
+        self.AUDIO_FORMAT = pyaudio.paInt16  # alternative: pyInt32
+        self.CHANNELS = 1
+        self.RATE = 20000
+        self.microphone = Microphone(self, self.pyaudio, self.CHUNK_SIZE, self.AUDIO_FORMAT, self.CHANNELS, self.RATE)
 
-        while self.connected:
-            pass
-        self.disconnect()
+        for user_thread in range(0, len(self.usernames_rooms)):
+            print()
+            print("THREAD CREATED FOR USER")
+            self.speaker = Speaker(self, self.pyaudio, self.CHUNK_SIZE, self.AUDIO_FORMAT, self.CHANNELS, self.RATE)
 
 
     def disconnect(self):
@@ -63,10 +70,8 @@ class Communication:
         try:
             self.SOCKET.send(("DISCONNECT_" + str(self.USERNAME) + "_END").encode())
             self.SOCKET.close()
-            self.connected = False
         except Exception as e:
             self.SOCKET.close()
-            self.connected = False
             print("[DISCONNECTION ERROR] " + str(e))
 
 
@@ -74,7 +79,7 @@ class Communication:
         """ Sends data to server
             @param data:    bytestring object to send """
         try:
-            self.SOCKET.send(data)
+            self.SOCKET.sendall(data)
         except Exception as e:
             print("[DATASEND ERROR] " + str(e))
             self.disconnect()
@@ -89,11 +94,28 @@ class Communication:
             self.disconnect()
 
 
+    def send_message(self, string_data):
+        """ Probably gets called by UI """
+        if "ROOMSWITCH" in string_data:
+            print("[MESSAGE] ROOMSWITCH")
+            message_end = string_data.find("_END")
+            message_content = string_data[len("ROOMSWITCH_"):message_end]
+            username = message_content.split("_")[0]
+            room = message_content.split("_")[1]
+            self.usernames_rooms[username] = room
+            self.SOCKET.send(string_data.encode())
+
+
     def handle_message(self, string_data):
         """ Interprets the messages inside the string_data """
         if "DISCONNECT" in string_data:
-            pass
+            print("disconecct")
         if "ROOMSWITCH" in string_data:
-            pass
+            print("Roomswtich")
         if "USERJOIN" in string_data:
-            pass
+            beginning = string_data.find("USERJOIN")
+            end = string_data.find("_END")
+            print("USER JOINED!" + string_data[beginning:end])
+            self.usernames_rooms[str(len(self.usernames_rooms))] = "connectROOM"
+            if len(self.usernames_rooms) > 2:
+                Speaker(self, self.pyaudio, self.CHUNK_SIZE, self.AUDIO_FORMAT, self.CHANNELS, self.RATE)

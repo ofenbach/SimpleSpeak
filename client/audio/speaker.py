@@ -1,34 +1,29 @@
-
 import threading
 import pyaudio
+
 
 class Speaker:
     """ Handles received data, which can be audio or messages """
 
-    def __init__(self, COMMUNICATION, CHUNK_SIZE: int):
+    def __init__(self, COMMUNICATION, PYAUDIO, CHUNK_SIZE: int, AUDIO_FORMAT, CHANNELS, RATE):
         self.COMMUNICATION = COMMUNICATION
+        self.pyaudio = PYAUDIO
         self.CHUNK_SIZE = CHUNK_SIZE
+        self.CHUNK_SIZE = 4096
 
-        # audio settings
+        # audio settings TODO: channels = 2? Caused some bugs
         self.deaf = False
-        self.AUDIO_FORMAT = pyaudio.paInt16
-        self.CHANNELS = 1
-        self.RATE = 48000
+        self.AUDIO_FORMAT = AUDIO_FORMAT
+        self.CHANNELS = 1                   # 2: stereo, 1: mono
+        self.RATE = RATE
 
         # starting speaker and speaker list
-        self.pyaudio = pyaudio.PyAudio()
-        #print("[AVAILABLE SPEAKERS]")
-        #self.devices_info = self.pyaudio.get_host_api_info_by_index(0)
-        #self.amount_speakers = self.devices_info.get('deviceCount')
-        #for i in range(0, self.amount_speakers):
-            #if self.pyaudio.get_device_info_by_host_api_device_index(0,i).is_format_supported(48000,i,output_format=True) > 0:  # if its a MICROPHONE
-        #    print("SPEAKER ID: ", id, self.pyaudio.get_device_info_by_host_api_device_index(0,i).get('name'))
-        #print("################")
-        self.playing_stream = self.pyaudio.open(format=self.AUDIO_FORMAT, channels=self.CHANNELS, rate=self.RATE, output=True, frames_per_buffer=self.CHUNK_SIZE)
+        self.playing_stream = self.pyaudio.open(format=self.AUDIO_FORMAT, channels=self.CHANNELS, rate=self.RATE,
+                                                output=True, frames_per_buffer=self.CHUNK_SIZE)
 
         # start playing thread
-        self.running = True
         threading.Thread(target=self.start_playing).start()
+        #self.start_playing()
 
 
     def start_playing(self):
@@ -36,22 +31,30 @@ class Speaker:
             If its audio, play it if not deaf """
 
         print("[SPEAKER] Started receiving data ...")
+        self.running = True
         while self.running:
             try:
-                data = self.COMMUNICATION.receive_data()
-                string_data = ""
-                try:
-                    string_data = data.decode()
-                except:
-                    pass
+                if not self.deaf:
+                    data = self.COMMUNICATION.receive_data()
+                    string_data = ""
 
-                if "DISCONNECT" in string_data or "SWITCHROOM" in string_data or "USERJOIN" in string_data:     # there might be a problem here: if a user sends messages audio may be skipped playing
-                    self.COMMUNICATION.handle_message(string_data)                                              # solution maybe: cut out message out of string_data, encode and play data (instead of else)
+                    try:
+                        string_data = data.decode('utf-8', 'ignore')
+                    except Exception as e:
+                        pass    # there are some errors here, fix later
+
+                if "DISCONNECT" in string_data or "SWITCHROOM" in string_data or "USERJOIN" in string_data:  # there might be a problem here: if a user sends messages audio may be skipped playing
+                    self.COMMUNICATION.handle_message(string_data)  # solution maybe: cut out message out of string_data, encode and play data (instead of else)
                 else:
                     try:
                         self.playing_stream.write(data)
-                    except:
-                        pass
+                    except Exception as e:
+                        print("[PLAYING ERROR] " + str(e))
+                        self.COMMUNICATION.disconnect()
+                        self.running = False
+
             except Exception as e:
-                self.running = False
                 print("[SPEAKER ERROR] " + str(e))
+                self.COMMUNICATION.disconnect()
+                self.running = False
+                break

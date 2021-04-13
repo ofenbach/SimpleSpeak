@@ -1,17 +1,18 @@
-from audio.communication import Communication
+import webui
 
 
 def main():
-    """ Starts communication with server
-        Start UI    """
-    communication = Communication()
+    """ Start UI """
+
     try:
-        """ Connect and do its thing """
-        communication.connect("PyCharm", "127.0.0.1", 4848)
+        """ Start UI """
+        webui.startUI()
     finally:
         """ Important for cleanup communication before leaving
             Double safety, server should handle disconnects cleanly already """
-        communication.disconnect()
+        pass
+
 
 if __name__ == "__main__":
     main()
+
